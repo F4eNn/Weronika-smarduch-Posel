@@ -1,17 +1,80 @@
 import React from 'react'
+import Link from 'next/link'
+import Image from 'next/image'
+import { AiFillFacebook, AiFillInstagram, AiOutlineTwitter } from 'react-icons/ai'
+import { MdEmail } from 'react-icons/md'
 
 import { Wrapper } from '../ui/Wrapper'
-import { DesktopNav } from '../ui/DesktopNav'
+import { Logo } from '../ui/Logo'
+import { navigation } from '@/constants/navigation'
+import { FooterNav } from './FooterNav'
 
 export const Footer = () => {
+	const socialMedia = [
+		{ icon: <AiFillFacebook />, url: 'https://www.facebook.com/smarduch.weronika' },
+		{ icon: <AiFillInstagram />, url: 'https://www.instagram.com/weronikasmarduch/' },
+		{ icon: <AiOutlineTwitter />, url: 'https://twitter.com/WSmarduch ' },
+	]
 	return (
-		<footer className='mt-auto w-full border-t border-darkBlue py-16'>
+		<footer className='mt-auto  w-full border-t border-darkBlue py-16'>
 			<Wrapper>
-				<DesktopNav isFooter={true} />
+				<div className='mx-5'>
+					<div className='flex flex-col items-center justify-between gap-10 md:flex-row md:gap-0 '>
+						<Logo />
+						<div className='flex flex-col items-center  gap-8  lg:flex-row'>
+							<h2 className='text-center text-xl text-darkBlue   lg:text-2xl'>
+								Daj znać, co możemy dla Ciebie zrobić!
+							</h2>
+							<Link
+								href={navigation.contact.path}
+								className='hover:bg-secondaryHover rounded-[50px] bg-secondary  p-4 px-6 font-[500] text-white transition-colors duration-200 md:ml-auto lg:ml-0 lg:p-5 lg:px-7'
+							>
+								Skontaktuj się z nami
+							</Link>
+						</div>
+					</div>
+					<hr className='my-7' />
+					<div className='flex flex-col items-start justify-between gap-12 lg:flex-row xl:gap-20'>
+						<div className=' flex w-full flex-col flex-wrap items-center gap-10 font-[500] text-darkBlue sm:flex-row  sm:items-start sm:justify-between'>
+							<div className=' flex flex-col items-center gap-8  sm:items-start'>
+								<div className='flex gap-5'>
+									{socialMedia.map(({ icon, url }, idx) => (
+										<a
+											key={idx}
+											target='_blank'
+											href={url}
+											className='text-4xl transition-all duration-200 hover:scale-125 hover:text-secondary'
+										>
+											{icon}
+										</a>
+									))}
+								</div>
+								<p className='flex items-center gap-1 text-lg'>
+									<MdEmail size='1.5em' />
+									Email: sztab@gmail.com
+								</p>
+							</div>
+							<div className='space-y-5 text-center sm:text-left '>
+								<h3 className='text-xl font-[500]'>Adres do korespondencji</h3>
+								<div className='flex flex-col gap-2  '>
+									<span>Skawa 175A</span>
+									<span>+48 506 780 245</span>
+									<span>Skawa 34-713</span>
+								</div>
+							</div>
+						</div>
+						<Image
+							src='/Nowa-energia.png'
+							alt='Slogan nowa energia w polityce'
+							width={500}
+							height={200}
+							className='mx-auto inline-block'
+						/>
+					</div>
+					<FooterNav />
+					<p className='mt-20 text-center'>Prawa zastrzeżone &copy; 2023</p>
+				</div>
 			</Wrapper>
 		</footer>
 	)
-}
-{
-	/* <p>Skontaktuj się z nami, klikając <a href="mailto:mateusz4k@outlook.com">tutaj</a>.</p> */
 }

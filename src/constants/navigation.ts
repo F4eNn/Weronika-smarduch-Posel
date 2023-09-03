@@ -1,4 +1,4 @@
-type NavigationItem = {
+export type NavigationItem = {
 	path: string
 	label: string
 }
@@ -6,20 +6,17 @@ type NavigationItem = {
 export const navigation = {
 	home: {
 		path: '/',
-		label: 'strona główna',
+		label: 'Home',
 	},
 	about: {
 		path: '/o-mnie',
 		label: 'O mnie',
 	},
-	people: {
-		path: '/ludzie',
-		label: 'Ludzie',
+	team: {
+		path: '/zespol',
+		label: 'Zespół',
 	},
-	program: {
-		path: '/program',
-		label: 'Program',
-	},
+
 	contact: {
 		path: '/kontakt',
 		label: 'Kontakt',
@@ -27,8 +24,8 @@ export const navigation = {
 } as const satisfies Record<PropertyKey, NavigationItem>
 
 export const linksArray = [
-    [navigation.about.path, navigation.about.label],
-    [navigation.program.path, navigation.program.label],
-    [navigation.people.path, navigation.people.label],
-    [navigation.contact.path, navigation.contact.label],
+	[navigation.home.path, navigation.home.label],
+	[navigation.about.path, navigation.about.label],
+	[navigation.team.path, navigation.team.label],
+	[navigation.contact.path, navigation.contact.label],
 ]

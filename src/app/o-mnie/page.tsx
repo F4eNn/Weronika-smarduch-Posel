@@ -2,7 +2,7 @@ import React from 'react'
 
 import { AboutMe } from '@/components/about/AboutMe'
 
-const aboutMe = () => {
+const aboutMePage = () => {
 	return (
 		<main>
 			<AboutMe />
@@ -10,4 +10,4 @@ const aboutMe = () => {
 	)
 }
 
-export default aboutMe
+export default aboutMePage

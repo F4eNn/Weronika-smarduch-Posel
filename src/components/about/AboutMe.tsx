@@ -3,14 +3,18 @@ import Image from 'next/image'
 
 import QuoteIcon from '../../../public/quotes.svg'
 import { Wrapper } from '../ui/Wrapper'
+import { Title } from '../ui/Title'
+import { Section } from '../ui/Section'
 
 export const AboutMe = () => {
 	return (
-		<section className='mx-5 mb-20 mt-20 text-darkBlue'>
+		<Section>
 			<Wrapper>
 				<div className='flex flex-col  items-center justify-between gap-5 lg:flex-row '>
 					<div className='relative text-center text-lg  lg:w-1/2 lg:text-left'>
-						<h1 className='mb-24 text-center text-4xl font-bold md:text-5xl'>Kim jestem?</h1>
+						<div className='mb-24 text-center'>
+							<Title title='Kim jestem?' />
+						</div>
 						<p className='mb-5'>
 							Nazywam się Weronika Smarduch wychowałam się w Nowym Targu, a mieszkam w Łopusznej. Jestem absolwentką
 							Uniwersytetu Ekomicznego w Krakowie. Od prawie dziesięciu lat zajmuję się analizą i kontrolą finansową w
@@ -58,6 +62,6 @@ export const AboutMe = () => {
 					className='mt-10 hidden lg:block'
 				/>
 			</Wrapper>
-		</section>
+		</Section>
 	)
 }

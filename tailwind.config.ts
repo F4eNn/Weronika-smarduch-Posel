@@ -13,6 +13,7 @@ const config: Config = {
 				blue: '#295fff',
 				darkBlue: '#103983',
 				secondary: '#d72748',
+				secondaryHover: '#d72747cd',
 			},
 		},
 	},
