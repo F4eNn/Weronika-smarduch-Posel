@@ -9,7 +9,7 @@ export const People = () => {
 		<Section>
 			<Wrapper>
 				<div className='text-center'>
-					<Title title='Ludzie' />
+					<Title title='Zespół' />
 				</div>
 			</Wrapper>
 		</Section>

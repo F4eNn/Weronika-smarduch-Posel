@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -8,6 +9,8 @@ import { Wrapper } from '../ui/Wrapper'
 import { Logo } from '../ui/Logo'
 import { navigation } from '@/constants/navigation'
 import { FooterNav } from './FooterNav'
+import { motion } from '@/lib/motion'
+import { pulseAnimation } from '@/animations/animations'
 
 export const Footer = () => {
 	const socialMedia = [
@@ -16,7 +19,7 @@ export const Footer = () => {
 		{ icon: <AiOutlineTwitter />, url: 'https://twitter.com/WSmarduch ' },
 	]
 	return (
-		<footer className='mt-auto  w-full border-t border-darkBlue py-16'>
+		<footer className='mt-auto  w-full border-t border-darkBlue pb-3 pt-16'>
 			<Wrapper>
 				<div className='mx-5'>
 					<div className='flex flex-col items-center justify-between gap-10 md:flex-row md:gap-0 '>
@@ -25,12 +28,14 @@ export const Footer = () => {
 							<h2 className='text-center text-xl text-darkBlue   lg:text-2xl'>
 								Daj znać, co możemy dla Ciebie zrobić!
 							</h2>
-							<Link
-								href={navigation.contact.path}
-								className='hover:bg-secondaryHover rounded-[50px] bg-secondary  p-4 px-6 font-[500] text-white transition-colors duration-200 md:ml-auto lg:ml-0 lg:p-5 lg:px-7'
-							>
-								Skontaktuj się z nami
-							</Link>
+							<motion.div {...pulseAnimation}>
+								<Link
+									href={navigation.contact.path}
+									className='hover:bg-secondaryHover rounded-[50px] bg-secondary  p-4 px-6 font-[500] text-white transition-colors duration-200 md:ml-auto lg:ml-0 lg:p-5 lg:px-7'
+								>
+									Skontaktuj się z nami
+								</Link>
+							</motion.div>
 						</div>
 					</div>
 					<hr className='my-7' />
