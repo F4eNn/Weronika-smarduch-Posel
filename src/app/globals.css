@@ -4,6 +4,6 @@
 
 @layer components {
 	.custom-shadow {
-		box-shadow: 0 0 30px 1px rgba(117, 117, 117, 0.164);
+		box-shadow: 0 0 30px 1px rgba(117, 117, 117, 0.101);
 	}
 }

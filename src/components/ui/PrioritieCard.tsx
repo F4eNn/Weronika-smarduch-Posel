@@ -1,5 +1,7 @@
-import React, { ReactNode } from 'react'
-import { MdHiking } from 'react-icons/md'
+'use client'
+import React, { ReactNode, useState } from 'react'
+import { FaArrowDown } from 'react-icons/fa'
+import { FaArrowUp } from 'react-icons/fa6'
 
 interface PrioritiesCardProps {
 	title: string
@@ -10,15 +12,35 @@ interface PrioritiesCardProps {
 }
 
 export const PrioritieCard = ({ title, desc, icon, marginLeft, bg = 'bg-primary' }: PrioritiesCardProps) => {
+	const [isRoll, setIsRoll] = useState(false)
+
+	const handleRoll = () => {
+		setIsRoll(prev => !prev)
+	}
 	return (
 		<div
-			className={`${bg} flex h-[500px] xl:w-max items-center gap-20 w-full  justify-center ${marginLeft} rounded-2xl p-12   text-center text-white drop-shadow-lg`}
+			className={`${bg} flex w-full flex-col  items-center justify-between gap-7  lg:w-max  lg:flex-row ${marginLeft} rounded-2xl p-8 text-center   text-white  lg:p-12`}
 		>
-			<div className='max-w-[650px] space-y-10 text-left'>
-				<h3 className=' text-3xl font-bold '>{title}</h3>
-				<p className=' text-lg'>{desc}</p>
+			<div className=' max-w-[625px] space-y-10 text-center lg:text-left'>
+				<h3 className=' text-2xl font-bold md:text-3xl lg:w-[625px]'>{title}</h3>
+
+				<button
+					onClick={handleRoll}
+					className='mx-auto flex  items-center gap-3 rounded-3xl border-[1px] border-white px-3 py-2 text-center lg:mx-0'
+				>
+					{!isRoll ? (
+						<>
+							Rozwiń <FaArrowDown />
+						</>
+					) : (
+						<>
+							Zwiń <FaArrowUp />
+						</>
+					)}
+				</button>
+				<p className={` ${isRoll ? 'block' : 'hidden'} text-base lg:text-lg`}>{desc}</p>
 			</div>
-			<div className='text-[15em]'>{icon}</div>
+			<div className='text-[10em] lg:text-[12em] '>{icon}</div>
 		</div>
 	)
 }
