@@ -47,26 +47,27 @@ export const AboutMe = () => {
 						<div className='absolute right-0 top-16 -z-10 h-40 w-40 fill-darkBlue/10'>
 							<QuoteIcon />
 						</div>
-						<div className='absolute -right-3 top-16 -z-10 h-14 w-14 fill-darkBlue sm:-right-5'>
+						<div className='absolute -right-3 top-16 -z-10 h-14 w-14 fill-darkBlue lg:-right-5'>
 							<QuoteIcon />
 						</div>
 					</div>
 					<div className='flex items-end   lg:flex-col'>
-						<div className=' lg:hidden'>
-							<Image src='/weronika-minify/Nasza-w-sejmie.webp' alt='Weronika Smarduch' width={550} height={600} />
+						<div className=' relative lg:hidden w-[325px] sm:w-[500px] aspect-[2] '>
+							<Image src='/weronika-minify/Nasza-w-sejmie.webp' alt='Weronika Smarduch' fill />
 						</div>
 						<div>
 							<Image src='/weronika-minify/Weronika-1.webp' alt='Weronika Smarduch' width={450} height={600} />
 						</div>
 					</div>
 				</div>
-				<Image
-					src='/weronika-minify/Nasza-w-sejmie.webp'
-					alt='Weronika Smarduch'
-					width={550}
-					height={600}
-					className='mt-10 hidden lg:block'
-				/>
+				<div className='relative hidden lg:block w-[500px] aspect-[2]'>
+					<Image
+						src='/weronika-minify/Nasza-w-sejmie.webp'
+						alt='Weronika Smarduch'
+						fill
+						className='mt-10 '
+					/>
+				</div>
 			</Wrapper>
 		</Section>
 	)

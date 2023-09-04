@@ -14,9 +14,9 @@ import { pulseAnimation } from '@/animations/animations'
 
 export const Footer = () => {
 	const socialMedia = [
-		{ icon: <AiFillFacebook />, url: 'https://www.facebook.com/smarduch.weronika' },
-		{ icon: <AiFillInstagram />, url: 'https://www.instagram.com/weronikasmarduch/' },
-		{ icon: <AiOutlineTwitter />, url: 'https://twitter.com/WSmarduch ' },
+		{ icon: <AiFillFacebook />, url: 'https://www.facebook.com/smarduch.weronika' ,label: 'facebook'},
+		{ icon: <AiFillInstagram />, url: 'https://www.instagram.com/weronikasmarduch/', label: 'instagram' },
+		{ icon: <AiOutlineTwitter />, url: 'https://twitter.com/WSmarduch ', label: 'twitter' },
 	]
 	return (
 		<footer className='mt-auto  w-full border-t border-darkBlue pb-3 pt-16'>
@@ -43,8 +43,9 @@ export const Footer = () => {
 						<div className=' flex w-full flex-col flex-wrap items-center gap-10 font-[500] text-darkBlue sm:flex-row  sm:items-start sm:justify-between'>
 							<div className=' flex flex-col items-center gap-8  sm:items-start'>
 								<div className='flex gap-5'>
-									{socialMedia.map(({ icon, url }, idx) => (
+									{socialMedia.map(({ icon, url, label }, idx) => (
 										<a
+											aria-label={label}
 											key={idx}
 											target='_blank'
 											href={url}

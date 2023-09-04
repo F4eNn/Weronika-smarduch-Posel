@@ -6,7 +6,7 @@ import { PrioritieCard } from '../ui/PrioritieCard'
 
 export const Priorities = () => {
 	return (
-		<section className=' custom-shadow  relative mx-3 mt-[875px] rounded-xl bg-white py-20 md:mt-[290px] lg:mx-8  lg:mt-[390px] lg:rounded-lg lg:py-32 '>
+		<section className=' custom-shadow overflow-x-hidden relative mx-3 mt-[875px] rounded-xl bg-white py-20 md:mt-[290px] lg:mx-8  lg:mt-[390px] lg:rounded-lg lg:py-32 '>
 			<Wrapper>
 				<div>
 					<h2 className='mb-16 text-center font-[500] text-darkBlue text-3xl lg:mb-32 lg:text-5xl'>

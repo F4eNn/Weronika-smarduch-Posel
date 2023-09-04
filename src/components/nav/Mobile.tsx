@@ -39,7 +39,7 @@ export const Mobile = () => {
 			<div className={`flex items-center  justify-between p-3 md:hidden ${isOpen ? 'text-white' : ''} `}>
 				<Logo />
 				<div className='relative z-50'>
-					<Hamburger toggle={setIsOpen} toggled={isOpen} />
+					<Hamburger label='nawigacja mobilna' toggle={setIsOpen} toggled={isOpen} />
 				</div>
 			</div>
 			<AnimatePresence>
