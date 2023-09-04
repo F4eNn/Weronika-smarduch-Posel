@@ -29,6 +29,12 @@ export const AboutMe = () => {
 							rodziny są dziś nasza największą bolączką i mamy plan jak to zmienić! Dziś dostaliśmy możliwość
 							wprowadzenia naszych pomysłów w życie!
 						</p>
+						<p className='mb-5'>
+							Wśród lokalnych ludzi żyje i pracuje, jestem stąd i to się nie zmieni. Nigdy nie odcięłam się od miejsca z
+							którego pochodzę i nie chowałam się za tytułami czy przywilejami. Z tego miejsca mogę Państwu obiecać, że
+							tak zostanie. Na wszystko do czego doszłam zapracowałam ja i rzesza ludzi, w tym również Państwo- moi
+							wyborcy, już dzisiaj pragnę podziękować za zaufanie i życzę nam wszystkim dalszej owocnej współpracy.
+						</p>
 
 						<div className='sm:ml-10'>
 							<p className='my-10 mb-5  text-left font-[500]'>kandyduję do Sejmu RP:</p>
@@ -47,15 +53,15 @@ export const AboutMe = () => {
 					</div>
 					<div className='flex items-end   lg:flex-col'>
 						<div className=' lg:hidden'>
-							<Image src='/Nasza-w-sejmie.png' alt='Weronika Smarduch' width={550} height={600} />
+							<Image src='/weronika-minify/Nasza-w-sejmie.webp' alt='Weronika Smarduch' width={550} height={600} />
 						</div>
 						<div>
-							<Image src='/Weronika-1.jpg' alt='Weronika Smarduch' width={450} height={600} />
+							<Image src='/weronika-minify/Weronika-1.webp' alt='Weronika Smarduch' width={450} height={600} />
 						</div>
 					</div>
 				</div>
 				<Image
-					src='/Nasza-w-sejmie.png'
+					src='/weronika-minify/Nasza-w-sejmie.webp'
 					alt='Weronika Smarduch'
 					width={550}
 					height={600}

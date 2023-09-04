@@ -56,7 +56,7 @@ export const Footer = () => {
 								</div>
 								<p className='flex items-center gap-1 text-lg'>
 									<MdEmail size='1.5em' />
-									Email: sztab@gmail.com
+									Email: smarduch.sztab@gmail.com
 								</p>
 							</div>
 							<div className='space-y-5 text-center sm:text-left '>
@@ -69,7 +69,7 @@ export const Footer = () => {
 							</div>
 						</div>
 						<Image
-							src='/Nowa-energia.png'
+							src='/weronika-minify/Nowa-energia.webp'
 							alt='Slogan nowa energia w polityce'
 							width={500}
 							height={200}

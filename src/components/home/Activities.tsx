@@ -15,7 +15,7 @@ export const Activities = () => {
 				<h2 className='mb-32 text-center text-3xl font-[500] text-darkBlue lg:text-5xl'>Działania</h2>
 				<div className='space-y-12'>
 					<div className='flex flex-col justify-between gap-12 lg:flex-row'>
-						<ActivitiesCard {...thirdCard} isSlogan={true} />
+						<ActivitiesCard {...fourthCard} />
 
 						<div className='flex flex-1 flex-col gap-12'>
 							<ActivitiesCard {...firstCard} />
@@ -23,7 +23,7 @@ export const Activities = () => {
 						</div>
 					</div>
 					<div className='text-center'>
-						<ActivitiesCard {...fourthCard} />
+						<ActivitiesCard {...thirdCard} />
 					</div>
 				</div>
 			</Wrapper>
