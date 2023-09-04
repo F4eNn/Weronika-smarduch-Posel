@@ -22,7 +22,7 @@ export const Footer = () => {
 		<footer className='mt-auto  w-full border-t border-darkBlue pb-3 pt-16'>
 			<Wrapper>
 				<div className='mx-5'>
-					<div className='flex flex-col items-center justify-between gap-10 md:flex-row md:gap-0 mb-12 '>
+					<div className='mb-12 flex flex-col items-center justify-between gap-10 md:flex-row md:gap-0 '>
 						<Logo />
 						<div className='flex flex-col items-center  gap-8 lg:flex-row'>
 							<h2 className='text-center text-xl text-darkBlue   lg:text-2xl'>
@@ -31,7 +31,7 @@ export const Footer = () => {
 							<motion.div {...pulseAnimation} className=' md:ml-auto'>
 								<Link
 									href={navigation.contact.path}
-									className='hover:bg-secondaryHover rounded-[50px] bg-secondary  p-4 px-6 font-[500] text-white transition-colors duration-200 md:ml-auto lg:ml-0 lg:p-5 lg:px-7'
+									className='rounded-[50px] bg-secondary p-4  px-6 font-[500] text-white transition-colors duration-200 hover:bg-secondaryHover md:ml-auto lg:ml-0 lg:p-5 lg:px-7'
 								>
 									Skontaktuj się z nami
 								</Link>
@@ -54,10 +54,17 @@ export const Footer = () => {
 										</a>
 									))}
 								</div>
-								<p className='flex items-center gap-1 text-lg'>
-									<MdEmail size='1.5em' />
-									Email: smarduch.sztab@gmail.com
-								</p>
+								<div className='space-y-5'>
+									<p className='flex items-center flex-col gap-1 text-lg sm:flex-row text-center'>
+										<MdEmail size='1.5em' />
+										Email: smarduch.sztab@gmail.com
+									</p>
+									<div className='flex flex-col text-center text-lg items-center  sm:text-lg sm:items-start'>
+										<p className=' mb-3 '>Chcesz pomóc? Skontaktuj się z nami!</p>
+										<span className='underline'>+48 535 329 850 </span>
+										<span className='underline'>+48 506 780 245</span>
+									</div>
+								</div>
 							</div>
 							<div className='space-y-5 text-center sm:text-left '>
 								<h3 className='text-xl font-[500]'>Adres do korespondencji</h3>

@@ -2,21 +2,10 @@
 import React from 'react'
 
 import { motion } from '@/lib/motion'
+import { pathVariants } from '@/animations/animations'
 
 export const AnimateHeart = () => {
-	const pathVariants = {
-		initial: {
-			pathLength: 0,
-		},
-		animate: {
-			pathLength: 1,
-			transition: {
-				duration: 3,
-				ease: 'easeInOut',
-			},
-		},
-	}
-
+	
 	return (
 		<svg
 			version='1.0'

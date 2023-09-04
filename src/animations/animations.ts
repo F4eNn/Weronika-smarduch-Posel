@@ -1,5 +1,4 @@
 import { Variants } from 'framer-motion'
-import { stagger } from 'framer-motion/dom'
 export const pulseAnimation: Variants = {
 	initial: { scale: 1 },
 	animate: {
@@ -23,3 +22,17 @@ export const mobileItemsAnimation: Variants = {
 	initial: { x: 100, transition: { staggerChildren: 0.5, staggerDirection: -1 } },
 	animate: { x: 0, transition: { duration: 1, delay: 0.3, staggerChildren: 0.5, staggerDirection: 1 } },
 }
+export const pathVariants = {
+	initial: {
+		pathLength: 0,
+	},
+	animate: {
+		pathLength: 1,
+		transition: {
+			duration: 3,
+			ease: 'easeInOut',
+		},
+	},
+}
+
+
