@@ -4,23 +4,23 @@ import { FaArrowsDownToPeople } from 'react-icons/fa6'
 
 export const priorities = [
 	{
-		title: 'Długoterminowa strategia rozwoju turystyki w oparciu o cały subregion podhalański.',
-		desc: 'Mamy niepowtarzalny region, który przyciąga turystów wieloma pasmami górskimi oraz atrakcjami turystycznymi. Strategia powinna być przygotowa w oparciu o rozłożenie ruchu turystycznego, promocję całego regionu oraz z myślą o komforcie życia mieszkańców.',
+		title: 'Rozwój turystyki w całym regionie podhalańskim! ',
+		desc: 'Nasz niepowtarzalny region przyciąga turystów licznymi pasmami górskimi oraz innymi atrakcjami turystycznymi. Strategia rozwoju powinna być przygotowana z myślą o komforcie życia mieszkańców, rozłożeniu ruchu turystycznego oraz większej promocji naszego regionu.',
 		icon: <MdHiking />,
 	},
 	{
 		title: 'Skuteczna walka ze smogiem!',
-		desc: 'Nie jest możliwy dalszy rozwój turystyki, szczególnie zimowej bez rowziązania problemu smogu. Będę walczyć o przekierowanie środków z krajowego programu &ldquo;Czyste powietrze&rdquo; do budżetów samorządów, w szczególności tych, które pozycjonują się jako ośrodki turystyczne czy uzdrowiskowe.',
+		desc: 'Dalszy rozwój turystyki, a zwłaszcza zimowej nie jest możliwy bez rozwiązania problemu smogu. Będę walczyć o środki z krajowego programu „Czyste powietrze”, by uzyskać je dla lokalnych samorządów - w szczególności tych ze statusem uzdrowisk i ośrodków turystycznych. ',
 		icon: <BsCloudCheck />,
 	},
 	{
 		title: 'Rodzinne firmy filarem gospodarki regionu!',
-		desc: 'Pandemia Covid, rosnące koszty prowadzenia działalności gospodarczej oraz Polski Ład zabijają dziś opłacalność! Uprościmy podatki, przekształcimy Urzędy Skarbowe w Centra Obsługi Podatnika i zadbamy o stabilną sytuację gospodarczą i przyszłość małych przedsiębiorstw.',
+		desc: ' COVID-19 rosnące koszty prowadzenia działalności oraz Polski Ład zabijają dziś opłacalność! Uprośćmy podatki, przekształćmy Urzędy Skarbowe w Centra Obsługi Podatnika i zadbajmy o stabilną sytuację gospodarczą i lepszą przyszłość dla małych i średnich przedsiębiorstw.',
 		icon: <BsShop />,
 	},
 	{
-		title: 'Młodzi przyszłością naszego narodu!',
-		desc: 'Wielu z Nas zauważa, że młodzi z naszego śadecko-podhalańskiego regionu wyjeżdżają na studia czy za granicę i nie wracają na swoją ojcowiznę. Jest to bardzo niebezpieczne zjawisko, którego konsekwencje będziemy ponosić wszyscy. Dlatego tak ważne jest, aby stworzyć młodym możliwość powrotu w rodzinne strony. Priorytetami powinno być stworzenie odpowiedniej bazy przedszkoli, żłobków oraz walka z wykluczeniem komunikacyjnym',
+		title: 'Młodzi przyszłością!',
+		desc: 'Coraz częściej młodzi z naszego regionu wyjeżdżają na studia i do pracy do wielkich miast, czy za granicę i tam już zostają. Konsekwencje tego niebezpiecznego zjawiska będziemy ponosić wszyscy. Rozwiązaniem jest stworzenie w młodych chęci i danie im możliwości do powrotu w rodzinne strony. Priorytetami są stworzenie odpowiedniej bazy mieszkań, żłobków i przedszkoli oraz walka z wykluczeniem komunikacyjnym.',
 		icon: <FaArrowsDownToPeople />,
 	},
 ] as const

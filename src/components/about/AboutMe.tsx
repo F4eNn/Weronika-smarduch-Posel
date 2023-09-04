@@ -18,13 +18,13 @@ export const AboutMe = () => {
 						<p className='mb-5'>
 							Nazywam się Weronika Smarduch wychowałam się w Nowym Targu, a mieszkam w Łopusznej. Jestem absolwentką
 							Uniwersytetu Ekomicznego w Krakowie. Od prawie dziesięciu lat zajmuję się analizą i kontrolą finansową w
-							inwestycjach i branży Horeca. Doskonale znam problemy jakie przechodzą przedsiębiorcy na południu
-							Małopolski. Pandemia Covid-19, rosnące koszty prowadzenia działalności i polski ład doprowadziło wiele
+							inwestycjach i branży Horeca. Doskonale znam problemy przez jakie przechodzą przedsiębiorcy na południu
+							Małopolski. Pandemia COVID-19, rosnące koszty prowadzenia działalności i Polski Ład doprowadziło wiele
 							małych firm do upadku a branża gastronomiczna znajduje sie obecnie w głębokim kryzysie.Dlatego właśnie
 							gospodarka i wolny rynek jest dla mnie priorytetem.
 						</p>
 						<p className='mb-5'>
-							Dzięki zaangażowaniu wielu młodych osób, udało nam się dorzucić, do debaty lokalne problem, z którymi
+							Dzięki zaangażowaniu wielu młodych osób rozmawiamy i rozwiązujemy realne, lokalne problemy, z którymi
 							borykają się mieszkańcy małych miejscowości. Brak młodych ludzi, wykluczenia komunikacyjne i ubożejące
 							rodziny są dziś nasza największą bolączką i mamy plan jak to zmienić! Dziś dostaliśmy możliwość
 							wprowadzenia naszych pomysłów w życie!
@@ -39,9 +39,9 @@ export const AboutMe = () => {
 						<div className='sm:ml-10'>
 							<p className='my-10 mb-5  text-left font-[500]'>kandyduję do Sejmu RP:</p>
 							<ul className='ml-10 list-disc space-y-3 text-left '>
-								<li>aby młode pokolenia miało odpowiednią reprezentację,</li>
-								<li>aby mieszkańcy małych miast i wsi odzyskali swój własny głos w parlamencie,</li>
-								<li>aby problemy lokalnych społeczeństw zawszy były priorytetem.</li>
+								<li>Aby młode pokolenia miały odpowiednią reprezentację,</li>
+								<li>Aby mieszkańcy małych miast i wsi odzyskali swój własny głos w parlamencie,</li>
+								<li>Aby problemy lokalnych społeczeństw zawszy były priorytetem.</li>
 							</ul>
 						</div>
 						<div className='absolute right-0 top-16 -z-10 h-40 w-40 fill-darkBlue/10'>
