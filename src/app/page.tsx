@@ -4,7 +4,7 @@ import { Priorities } from '@/components/home/Priorities'
 
 export default function Home() {
 	return (
-		<main>
+		<main className='overflow-x-hidden'>
 			<Hero />
 			<Priorities />
 			<Activities />

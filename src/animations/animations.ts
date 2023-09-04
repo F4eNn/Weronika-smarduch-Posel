@@ -34,5 +34,19 @@ export const pathVariants = {
 		},
 	},
 }
-
-
+export const sectionAnimation = {
+	initial: {
+		y: 30,
+		opacity: 0,
+	},
+	whileInView: {
+		y: 0,
+		opacity: 1,
+		transition: {
+			duration: 0.5,
+			type: 'spring',
+			stiffness: 120,
+		},
+	},
+	viewport: { once: true },
+}

@@ -7,7 +7,7 @@ import { usePathname } from 'next/navigation'
 import { Logo } from '../ui/Logo'
 import { linksArray } from '@/constants/navigation'
 import { AnimatePresence, motion } from '@/lib/motion'
-import { mobileItemsAnimation, mobileMenuAnimation } from '@/animations/animations'
+import { mobileMenuAnimation } from '@/animations/animations'
 
 export const Mobile = () => {
 	const [isOpen, setIsOpen] = useState(false)
