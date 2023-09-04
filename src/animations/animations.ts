@@ -29,7 +29,7 @@ export const pathVariants = {
 	animate: {
 		pathLength: 1,
 		transition: {
-			duration: 3,
+			duration: 3.5,
 			ease: 'easeInOut',
 		},
 	},

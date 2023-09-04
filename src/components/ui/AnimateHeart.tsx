@@ -1,13 +1,14 @@
 'use client'
-import React from 'react'
+import React, { useState } from 'react'
 
 import { motion } from '@/lib/motion'
-import { pathVariants } from '@/animations/animations'
+import { pathVariants, pulseAnimation } from '@/animations/animations'
 
 export const AnimateHeart = () => {
-	
+    const [isCompleteAnimation, setIsCompleteAnimation] = useState(false)
 	return (
-		<svg
+		<motion.svg
+			{...(isCompleteAnimation) && pulseAnimation} 
 			version='1.0'
 			xmlns='http://www.w3.org/2000/svg'
 			width='100%'
@@ -24,6 +25,7 @@ export const AnimateHeart = () => {
 					strokeWidth={40}
 					stroke='#d72748'
 					{...pathVariants}
+                    onAnimationComplete={() => setIsCompleteAnimation(true)}
 					d='M2651 7779 c-47 -5 -136 -21 -199 -35 -673 -151 -1206 -653 -1397
 -1316 -50 -174 -67 -306 -68 -518 0 -281 37 -516 125 -790 308 -958 1115
 -1902 2508 -2937 337 -250 645 -466 699 -491 74 -34 171 -40 257 -17 68 18
@@ -39,6 +41,6 @@ export const AnimateHeart = () => {
 20 327 11 435 -17z'
 				/>
 			</g>
-		</svg>
+		</motion.svg>
 	)
 }
