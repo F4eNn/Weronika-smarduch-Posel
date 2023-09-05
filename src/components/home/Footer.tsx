@@ -48,6 +48,8 @@ export const Footer = () => {
 											aria-label={label}
 											key={idx}
 											target='_blank'
+											rel='noopener'
+											
 											href={url}
 											className='text-4xl transition-all duration-200 hover:scale-125 hover:text-secondary'
 										>
