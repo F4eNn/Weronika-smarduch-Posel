@@ -14,7 +14,7 @@ import { pulseAnimation } from '@/animations/animations'
 
 export const Footer = () => {
 	const socialMedia = [
-		{ icon: <AiFillFacebook />, url: 'https://www.facebook.com/smarduch.weronika' ,label: 'facebook'},
+		{ icon: <AiFillFacebook />, url: 'https://www.facebook.com/smarduch.weronika', label: 'facebook' },
 		{ icon: <AiFillInstagram />, url: 'https://www.instagram.com/weronikasmarduch/', label: 'instagram' },
 		{ icon: <AiOutlineTwitter />, url: 'https://twitter.com/WSmarduch ', label: 'twitter' },
 	]
@@ -56,14 +56,13 @@ export const Footer = () => {
 									))}
 								</div>
 								<div className='space-y-5'>
-									<p className='flex items-center flex-col gap-1 text-lg sm:flex-row text-center'>
+									<p className='flex flex-col items-center gap-1 text-center text-lg sm:flex-row'>
 										<MdEmail size='1.5em' />
 										Email: smarduch.sztab@gmail.com
 									</p>
-									<div className='flex flex-col text-center text-lg items-center  sm:text-lg sm:items-start'>
+									<div className='flex flex-col items-center text-center text-lg  sm:items-start sm:text-lg'>
 										<p className=' mb-3 '>Chcesz pomóc? Skontaktuj się z nami!</p>
 										<span className='underline'>+48 535 329 850 </span>
-										<span className='underline'>+48 506 780 245</span>
 									</div>
 								</div>
 							</div>

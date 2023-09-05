@@ -32,7 +32,7 @@ export const PrioritieCard = ({ title, desc, icon, marginLeft, bg = 'bg-primary'
 				opacity: 1,
 				transition: {duration: 0.5, stiffness:50, type: 'spring'}
 			}}
-			viewport={{ once: true, margin: '-150px'}}
+			viewport={{ once: true, margin: '-50px'}}
 			className={`${bg} flex w-full flex-col  items-center justify-between gap-7  lg:w-max  lg:flex-row ${marginLeft} rounded-2xl p-8 text-center   text-white  lg:p-12`}
 		>
 			<div className=' mb-auto max-w-[625px] space-y-10 overflow-hidden text-center lg:text-left'>
