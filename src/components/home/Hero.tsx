@@ -18,9 +18,9 @@ export const Hero = () => {
 						className='md:w-[300px] lg:w-[400px]'
 					/>
 					<RevealAnimation>
-						<h1 className='mt-11 text-center text-[2rem] font-bold leading-[3.7rem] text-darkBlue md:mt-0 md:text-right md:text-[2.2rem]  md:leading-[3.5rem] md:text-white lg:text-[2.8rem] lg:leading-[4.2rem] xl:text-[3rem] xl:leading-[5.2rem] xl:flex xl:flex-col'>
-							<span>Kandydatka do Sejmu RP z okręgu Sądecko-Podhalańskiego. </span>
-							<span>Nr 1 na liście Koalicji Obywatelskiej</span>
+						<h1 className='mt-11 text-center text-[2rem] font-bold leading-[3.7rem] text-darkBlue md:mt-0 md:text-right md:text-[2.2rem]  md:leading-[3.5rem] md:text-white lg:text-[2.8rem] lg:leading-[4.2rem] xl:flex xl:flex-col xl:text-[3.34rem] xl:leading-[5.2rem]'>
+							<span>Kandydatka do Sejmu RP</span>
+							<span>Nr. 1 na liście Koalicji Obywatelskiej w okręgu 14 sądecko-podhalańskim</span>
 						</h1>
 					</RevealAnimation>
 					<div className='absolute  hidden  -rotate-45 md:bottom-0 md:left-1/2 md:block md:h-[175px] md:w-[175px] lg:bottom-16 lg:h-[250px] lg:w-[250px]'>
