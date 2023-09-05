@@ -16,7 +16,7 @@ export const AnimateHeart = () => {
 			height='100%'
 			viewBox='0 0 900.000000 900.000000'
 			preserveAspectRatio='xMidYMid meet'
-			fill='#fff'
+			fill='none'
 		>
 			<g transform='translate(0.000000,900.000000) scale(0.100000,-0.100000)' className='transition-all duration-300'>
 				<motion.path
