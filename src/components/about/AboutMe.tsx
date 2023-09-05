@@ -20,8 +20,8 @@ export const AboutMe = () => {
 							Uniwersytetu Ekomicznego w Krakowie. Od prawie dziesięciu lat zajmuję się analizą i kontrolą finansową w
 							inwestycjach i branży Horeca. Doskonale znam problemy przez jakie przechodzą przedsiębiorcy na południu
 							Małopolski. Pandemia COVID-19, rosnące koszty prowadzenia działalności i Polski Ład doprowadziło wiele
-							małych firm do upadku a branża gastronomiczna znajduje sie obecnie w głębokim kryzysie.Dlatego właśnie
-							gospodarka i wolny rynek jest dla mnie priorytetem.
+							małych firm do upadku a branża gastronomiczna znajduje sie obecnie w głębokim kryzysie. Dlatego właśnie
+							gospodarka i wolny rynek są dla mnie priorytetem.
 						</p>
 						<p className='mb-5'>
 							Dzięki zaangażowaniu wielu młodych osób rozmawiamy i rozwiązujemy realne, lokalne problemy, z którymi
@@ -30,7 +30,7 @@ export const AboutMe = () => {
 							wprowadzenia naszych pomysłów w życie!
 						</p>
 						<p className='mb-5'>
-							Wśród lokalnych ludzi żyje i pracuje, jestem stąd i to się nie zmieni. Nigdy nie odcięłam się od miejsca z
+							Wśród lokalnych ludzi żyje i pracuje, jestem stąd i to się nie zmieni. Nigdy nie odcięłam się od miejsca, z
 							którego pochodzę i nie chowałam się za tytułami czy przywilejami. Z tego miejsca mogę Państwu obiecać, że
 							tak zostanie. Na wszystko do czego doszłam zapracowałam ja i rzesza ludzi, w tym również Państwo- moi
 							wyborcy, już dzisiaj pragnę podziękować za zaufanie i życzę nam wszystkim dalszej owocnej współpracy.

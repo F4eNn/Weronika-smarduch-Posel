@@ -49,7 +49,6 @@ export const Footer = () => {
 											key={idx}
 											target='_blank'
 											rel='noopener'
-											
 											href={url}
 											className='text-4xl transition-all duration-200 hover:scale-125 hover:text-secondary'
 										>
@@ -64,16 +63,20 @@ export const Footer = () => {
 									</p>
 									<div className='flex flex-col items-center text-center text-lg  sm:items-start sm:text-lg'>
 										<p className=' mb-3 '>Chcesz pomóc? Skontaktuj się z nami!</p>
-										<span className='underline'>+48 535 329 850 </span>
+										<a href='tel:+48506780245' className='underline'>
+											+48 506 780 245
+										</a>
 									</div>
 								</div>
 							</div>
 							<div className='space-y-5 text-center sm:text-left '>
 								<h3 className='text-xl font-[500]'>Adres do korespondencji</h3>
 								<div className='flex flex-col gap-2  '>
-									<span>Skawa 175A</span>
-									<span>+48 506 780 245</span>
-									<span>Skawa 34-713</span>
+									<span>ul. Podtatrzańska 69</span>
+									<span>Nowy Targ 34-400</span>
+									<a href='tel:+48535531035' className='underline'>
+										+48 535 531 035
+									</a>
 								</div>
 							</div>
 						</div>
