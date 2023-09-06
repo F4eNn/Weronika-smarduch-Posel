@@ -10,7 +10,7 @@ export const priorities = [
 	},
 	{
 		title: 'Skuteczna walka ze smogiem!',
-		desc: 'Dalszy rozwój turystyki, a zwłaszcza zimowej nie jest możliwy bez rozwiązania problemu smogu. Będę walczyć o środki z krajowego programu „Czyste powietrze”, by uzyskać je dla lokalnych samorządów - w szczególności tych ze statusem uzdrowisk i ośrodków turystycznych. ',
+		desc: 'Nie jest możliwy dalszy rozwój truystyki, szczególnie zimowej bez rozwiązania problemu smogu. Będę walczyć o przekierowanie środków z krajowego programu "Czyste powietrze" do budżetów samorządów, w szczególności tych, które pozycjonują się jako ośrodki trurystyczne i uzdrowiskowe. ',
 		icon: <BsCloudCheck />,
 	},
 	{
@@ -19,8 +19,8 @@ export const priorities = [
 		icon: <BsShop />,
 	},
 	{
-		title: 'Młodzi przyszłością!',
-		desc: 'Coraz częściej młodzi z naszego regionu wyjeżdżają na studia i do pracy do wielkich miast, czy za granicę i tam już zostają. Konsekwencje tego niebezpiecznego zjawiska będziemy ponosić wszyscy. Rozwiązaniem jest stworzenie w młodych chęci i danie im możliwości do powrotu w rodzinne strony. Priorytetami są stworzenie odpowiedniej bazy mieszkań, żłobków i przedszkoli oraz walka z wykluczeniem komunikacyjnym.',
+		title: 'Młodzi przyszłością naszego regionu!',
+		desc: 'Wielu z Nas zauważa, że młodzi z naszego sądecko-podhalańskiego regionu wyjeżdża na studia czy za granicę i nie wracają na swoją ojcowiznę. Jest to bardzo niebezpieczne zjawisko, którego konsekwencje będziemy ponosić wszyscy. Dlatego tak ważne jest, aby stworzyć młodym możliwość powrotu w rodzinne strony. Priorytetami powinno być stworzenie odpowiedniej bazy przedszkoli, żłobków oraz walka z wykluczeniem komunikacyjnym.',
 		icon: <FaArrowsDownToPeople />,
 	},
 ] as const

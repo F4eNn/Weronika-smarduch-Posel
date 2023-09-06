@@ -10,7 +10,7 @@ export const AboutMe = () => {
 	return (
 		<Section>
 			<Wrapper>
-				<div className='flex flex-col  items-center justify-between gap-5 lg:flex-row '>
+				<div className='flex flex-col  items-center justify-around xl:justify-between gap-5 lg:flex-row '>
 					<div className='relative text-center text-lg  lg:w-1/2 lg:text-left'>
 						<div className='mb-24 text-center'>
 							<Title title='Kim jestem?' />
@@ -25,14 +25,14 @@ export const AboutMe = () => {
 						</p>
 						<p className='mb-5'>
 							Dzięki zaangażowaniu wielu młodych osób rozmawiamy i rozwiązujemy realne, lokalne problemy, z którymi
-							borykają się mieszkańcy małych miejscowości. Brak młodych ludzi, wykluczenia komunikacyjne i ubożejące
+							borykają się mieszkańcy małych miejscowości. Brak młodych ludzi, wykluczenie komunikacyjne i ubożejące
 							rodziny są dziś nasza największą bolączką i mamy plan jak to zmienić! Dziś dostaliśmy możliwość
 							wprowadzenia naszych pomysłów w życie!
 						</p>
 						<p className='mb-5'>
 							Wśród lokalnych ludzi żyje i pracuje, jestem stąd i to się nie zmieni. Nigdy nie odcięłam się od miejsca, z
 							którego pochodzę i nie chowałam się za tytułami czy przywilejami. Z tego miejsca mogę Państwu obiecać, że
-							tak zostanie. Na wszystko do czego doszłam zapracowałam ja i rzesza ludzi, w tym również Państwo- moi
+							tak zostanie. Na wszystko, do czego doszłam zapracowałam ja i rzesza ludzi, w tym również Państwo - moi
 							wyborcy, już dzisiaj pragnę podziękować za zaufanie i życzę nam wszystkim dalszej owocnej współpracy.
 						</p>
 
