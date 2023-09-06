@@ -1,4 +1,3 @@
 User-Agent: *
-Allow: /
-Disallow: /private/
-Sitemap: https://acme.com/sitemap.xml
+Disallow: 
+Sitemap: https://www.weronika-smarduch.pl/sitemap.xml

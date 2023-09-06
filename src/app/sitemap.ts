@@ -1,10 +1,10 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-	const baseUrl = 'https://kandydatka-do-sejmu-strona.vercel.app/'
-	const aboutMe = 'https://kandydatka-do-sejmu-strona.vercel.app/o-mnie'
-	const team = 'https://kandydatka-do-sejmu-strona.vercel.app/zespol'
-	const contact = 'https://kandydatka-do-sejmu-strona.vercel.app/kontakt'
+	const baseUrl = 'https://www.weronika-smarduch.pl/'
+	const aboutMe = 'https://www.weronika-smarduch.pl/o-mnie'
+	const team = 'https://www.weronika-smarduch.pl/zespol'
+	const contact = 'https://www.weronika-smarduch.pl/kontakt'
 	return [
 		{
 			url: baseUrl,
