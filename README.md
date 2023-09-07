@@ -15,6 +15,7 @@ React | JS library |
 Next.js | React framework |
 Tailwind | Framework CSS |
 Framer-motion | Library for animation |
+imagemincli | For optimize images |
 
 <h2>Details</h2>
 <p>A simple website built for my client, who is running for the Republic of Poland parliamentary elections. It took me 3 days to build this site with modern design and animations and then additional time to make minor adjustments</p>
