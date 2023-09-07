@@ -17,5 +17,5 @@ Tailwind | Framework CSS |
 Framer-motion | Library for animation |
 
 <h2>Details</h2>
-<p>A simple website built for my client, who is running for the Republic of Poland parliamentary elections. It took me 2.5 days to build this site with modern design and animations and then additional time to make minor adjustments</p>
+<p>A simple website built for my client, who is running for the Republic of Poland parliamentary elections. It took me 3 days to build this site with modern design and animations and then additional time to make minor adjustments</p>
 
