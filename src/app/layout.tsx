@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 		'Weronika Smarduch Kandydatka do Sejmu Rzeczpospolitej Polskiej z okręgu Sądecko-Podhalańskiego. Nr 1 na liście koalicji Obywatelskiej',
 	keywords: ['Kandydatka', 'sejm', 'Rzeczpospolita', 'Polska', 'podhale', 'koalicja', 'obywatelska'],
 	icons: {
-		icon: ['/favicon.icon?v=2'],
+		icon: ['/favicon.ico?v=2'],
 		apple: ['/apple-touch-icon.png?v=2'],
 		shortcut: ['/apple-touch-icon.png?v=2']
 	},
