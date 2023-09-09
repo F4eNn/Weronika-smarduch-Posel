@@ -11,8 +11,13 @@ export const metadata: Metadata = {
 	title: 'Weronika Smarduch',
 	description:
 		'Weronika Smarduch Kandydatka do Sejmu Rzeczpospolitej Polskiej z okręgu Sądecko-Podhalańskiego. Nr 1 na liście koalicji Obywatelskiej',
-	themeColor: '#d72748',
 	keywords: ['Kandydatka', 'sejm', 'Rzeczpospolita', 'Polska', 'podhale', 'koalicja', 'obywatelska'],
+	icons: {
+		icon: ['/favicon.icon?v=2'],
+		apple: ['/apple-touch-icon.png?v=2'],
+		shortcut: ['/apple-touch-icon.png?v=2']
+	},
+	manifest: '/site.webmanifest'
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
