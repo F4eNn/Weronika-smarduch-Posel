@@ -18,7 +18,7 @@ export const People = () => {
 						{team.map((item, idx) => (
 							<div
 								key={idx}
-								className='flex-grow rounded-lg border-[1px] transition-all duration-300 hover:scale-[1.03] hover:border-darkBlue '
+								className='flex-grow rounded-lg border-[1px] transition-all duration-300 hover:scale-[1.012] hover:border-darkBlue '
 							>
 								<div key={idx} className=' space-y-8 px-0 sm:px-8 p-8 text-center '>
 									<div className='mx-auto flex h-[400px] w-max items-center justify-center rounded-full border-[1px] bg-slate-100'>
