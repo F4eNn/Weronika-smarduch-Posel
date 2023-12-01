@@ -16,6 +16,7 @@ export const Hero = () => {
 						width={400}
 						height={600}
 						className='md:w-[300px] lg:w-[400px]'
+						priority
 					/>
 					<RevealAnimation>
 						<h1 className='mt-11 text-center text-[2rem] font-bold leading-[3.7rem] text-darkBlue md:mt-0 md:text-right md:text-[2.2rem]  md:leading-[3.5rem] md:text-white lg:text-[2.8rem] lg:leading-[4.2rem] xl:flex xl:flex-col xl:text-[3.34rem] xl:leading-[5.2rem]'>

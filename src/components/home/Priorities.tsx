@@ -15,9 +15,9 @@ export const Priorities = () => {
 					<div className=' space-y-20 lg:space-y-28 w-full'>
 						{priorities.map((items, idx) => {
 							if (idx % 2 !== 0) {
-								return <PrioritieCard key={idx} {...items} axeX='200px' bg='bg-secondary' marginLeft='ml-auto' />
+								return <PrioritieCard key={idx} {...items} axeX='65px' bg='bg-secondary' marginLeft='ml-auto' />
 							}
-							return <PrioritieCard key={idx} {...items} axeX='-200px' />
+							return <PrioritieCard key={idx} {...items} axeX='-65px' />
 						})}
 					</div>
 				</div>

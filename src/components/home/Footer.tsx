@@ -2,7 +2,8 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { AiFillFacebook, AiFillInstagram, AiOutlineTwitter } from 'react-icons/ai'
+import { AiFillFacebook, AiFillInstagram } from 'react-icons/ai'
+import { FaXTwitter } from 'react-icons/fa6'
 import { MdEmail } from 'react-icons/md'
 
 import { Wrapper } from '../ui/Wrapper'
@@ -16,7 +17,7 @@ export const Footer = () => {
 	const socialMedia = [
 		{ icon: <AiFillFacebook />, url: 'https://www.facebook.com/smarduch.weronika', label: 'facebook' },
 		{ icon: <AiFillInstagram />, url: 'https://www.instagram.com/weronikasmarduch/', label: 'instagram' },
-		{ icon: <AiOutlineTwitter />, url: 'https://twitter.com/WSmarduch ', label: 'twitter' },
+		{ icon: <FaXTwitter />, url: 'https://twitter.com/WSmarduch ', label: 'twitter' },
 	]
 	return (
 		<footer className='mt-auto  w-full border-t border-darkBlue pb-3 pt-16'>
@@ -50,7 +51,7 @@ export const Footer = () => {
 											target='_blank'
 											rel='noopener'
 											href={url}
-											className='text-4xl transition-all duration-200 hover:scale-125 hover:text-secondary'
+											className='text-4xl transition-all duration-300 hover:scale-110 hover:text-secondary'
 										>
 											{icon}
 										</a>

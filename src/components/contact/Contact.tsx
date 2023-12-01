@@ -19,7 +19,6 @@ export const Contact = () => {
 					</div>
 					<div className='relative mx-auto mt-12 flex items-center justify-center overflow-hidden pt-20 lg:h-[875px] lg:w-[975px] xl:w-10/12'>
 						<motion.div {...pulseAnimation} className='absolute  left-0  -z-10 hidden aspect-square w-full lg:block'>
-							{/* <Image src='/weronika-minify/serce.webp' alt='' fill /> */}
 							<HeartIcon />
 						</motion.div>
 						<div className='mb-20 flex flex-col  items-center lg:space-y-8 xl:space-y-10'>
@@ -34,7 +33,6 @@ export const Contact = () => {
 								</div>
 							</div>
 							<motion.div {...pulseAnimation} className='block aspect-square w-full lg:hidden'>
-								{/* <Image src='/weronika-minify/serce.webp' alt='' fill /> */}
 								<HeartIcon />
 							</motion.div>
 							<a
