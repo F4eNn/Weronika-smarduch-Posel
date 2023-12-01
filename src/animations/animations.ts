@@ -1,5 +1,6 @@
-import { Variants } from 'framer-motion'
-export const pulseAnimation: Variants = {
+import { MotionProps } from 'framer-motion'
+
+export const pulseAnimation: MotionProps = {
 	initial: { scale: 1 },
 	animate: {
 		scale: [1, 1.05, 1],
@@ -12,17 +13,17 @@ export const pulseAnimation: Variants = {
 	},
 }
 
-export const mobileMenuAnimation: Variants = {
+export const mobileMenuAnimation: MotionProps = {
 	initial: { opacity: 0, x: '100%' },
 	animate: { opacity: 1, x: 0, transition: { duration: 0.3 } },
 	exit: { x: '100%', transition: { duration: 0.3 } },
 }
 
-export const mobileItemsAnimation: Variants = {
+export const mobileItemsAnimation = {
 	initial: { x: 100, transition: { staggerChildren: 0.5, staggerDirection: -1 } },
 	animate: { x: 0, transition: { duration: 1, delay: 0.3, staggerChildren: 0.5, staggerDirection: 1 } },
 }
-export const pathVariants = {
+export const pathVariants: MotionProps = {
 	initial: {
 		pathLength: 0,
 	},
@@ -34,9 +35,9 @@ export const pathVariants = {
 		},
 	},
 }
-export const sectionAnimation = {
+export const sectionAnimation: MotionProps = {
 	initial: {
-		y: 30,
+		y: 15,
 		opacity: 0,
 	},
 	whileInView: {
@@ -45,8 +46,27 @@ export const sectionAnimation = {
 		transition: {
 			duration: 0.5,
 			type: 'spring',
-			stiffness: 120,
+			stiffness: 60,
 		},
 	},
 	viewport: { once: true },
 }
+
+export const priorityCardsAnimation = (axeX: '-65px' | '65px' | undefined): MotionProps => ({
+	initial: {
+		x: axeX,
+		opacity: 0,
+	},
+	whileInView: {
+		x: 0,
+		opacity: 1,
+		transition: { duration: 0.5, stiffness: 25, type: 'spring' },
+	},
+	viewport: { once: true, margin: '-50px' },
+})
+
+export const expandPriorityTextAnimation = (isRoll: boolean): MotionProps => ({
+	initial: { height: 0 },
+	animate: { height: isRoll ? 'auto' : 0 },
+	transition: { duration: 0.3 },
+})
