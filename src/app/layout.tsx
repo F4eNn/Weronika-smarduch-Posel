@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
 		<html lang='pl'>
-			<body className={`${poppins.className} flex min-h-screen flex-col`}>
+			<body className={`${poppins.className} flex min-h-screen flex-col pt-[82px]`}>
 				<Nav />
 				{children}
 				<Footer />

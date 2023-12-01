@@ -12,7 +12,7 @@ interface PrioritiesCardProps {
 	icon: ReactNode
 	marginLeft?: 'ml-auto'
 	bg?: 'bg-primary' | 'bg-secondary'
-	axeX?: '-65px' | '65px'
+	axeX?: '-40px' | '40px'
 }
 
 export const PrioritieCard = ({ title, desc, icon, marginLeft, bg = 'bg-primary', axeX }: PrioritiesCardProps) => {

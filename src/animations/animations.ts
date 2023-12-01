@@ -38,7 +38,7 @@ export const pathVariants: MotionProps = {
 export const sectionAnimation: MotionProps = {
 	initial: {
 		y: 15,
-		opacity: 0,
+		opacity: 0.5,
 	},
 	whileInView: {
 		y: 0,
@@ -52,7 +52,7 @@ export const sectionAnimation: MotionProps = {
 	viewport: { once: true },
 }
 
-export const priorityCardsAnimation = (axeX: '-65px' | '65px' | undefined): MotionProps => ({
+export const priorityCardsAnimation = (axeX: '-40px' | '40px' | undefined): MotionProps => ({
 	initial: {
 		x: axeX,
 		opacity: 0,
@@ -60,7 +60,7 @@ export const priorityCardsAnimation = (axeX: '-65px' | '65px' | undefined): Moti
 	whileInView: {
 		x: 0,
 		opacity: 1,
-		transition: { duration: 0.5, stiffness: 25, type: 'spring' },
+		transition: { stiffness: 35, type: 'spring' },
 	},
 	viewport: { once: true, margin: '-50px' },
 })
