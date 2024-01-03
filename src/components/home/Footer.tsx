@@ -13,6 +13,7 @@ import { FooterNav } from './FooterNav'
 import { motion } from '@/lib/motion'
 import { pulseAnimation } from '@/animations/animations'
 import { buttonVariants } from '../controls/Button'
+import { Heading } from '../ui/Heading'
 
 export const Footer = () => {
 	const socialMedia = [
@@ -27,9 +28,9 @@ export const Footer = () => {
 					<div className='mb-12 flex flex-col items-center justify-between gap-10 md:flex-row md:gap-0 '>
 						<Logo />
 						<div className='flex flex-col items-center  gap-8 lg:flex-row'>
-							<h2 className='text-center text-xl text-darkBlue   lg:text-2xl'>
+							<Heading as='h2' className='font-normal'>
 								Daj znać, co możemy dla Ciebie zrobić!
-							</h2>
+							</Heading>
 							<motion.div {...pulseAnimation} className=' md:ml-auto'>
 								<Link
 									href={navigation.contact.path}
@@ -76,7 +77,7 @@ export const Footer = () => {
 								</div>
 							</div>
 							<div className='space-y-5 text-center sm:text-left '>
-								<h3 className='text-xl font-[500]'>Adres do korespondencji</h3>
+								<Heading as='h3' className='font-[500]'>Adres do korespondencji</Heading>
 								<div className='flex flex-col gap-2  '>
 									<span>ul. Podtatrzańska 69</span>
 									<span>Nowy Targ 34-400</span>

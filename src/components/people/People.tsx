@@ -3,8 +3,8 @@ import Image from 'next/image'
 
 import { Section } from '../ui/Section'
 import { Wrapper } from '../ui/Wrapper'
-import { Title } from '../ui/Title'
 import { team } from '@/constants/team'
+import { Heading } from '../ui/Heading'
 
 export const People = () => {
 	return (
@@ -12,7 +12,7 @@ export const People = () => {
 			<Wrapper>
 				<div className='mb-44  text-center'>
 					<div className='my-24'>
-						<Title title='Zespół' />
+						<Heading as='h1'>Zespół</Heading>
 					</div>
 					<div className='flex flex-wrap-reverse justify-between gap-10 text-darkBlue'>
 						{team.map((item, idx) => (
@@ -32,7 +32,7 @@ export const People = () => {
 										/>
 									</div>
 								</div>
-								<h2 className='mx-auto h-[72px] w-full text-3xl font-[500]  md:max-w-[260px]'>{item.name}</h2>
+								<Heading as='h2' className='mx-auto h-[72px] w-full text-3xl md:max-w-[260px]'>{item.name}</Heading>
 								<div className={`space-y-3 ${idx === 0 ? 'lg:mt-5' : ''}   mx-4 mb-7 text-base sm:text-lg`}>
 									{item.role && <p>{item.role}</p>}
 									{item.email && <p>{item.email}</p>}

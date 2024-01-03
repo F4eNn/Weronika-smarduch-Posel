@@ -4,10 +4,10 @@ import { MdEmail } from 'react-icons/md'
 
 import { Section } from '../ui/Section'
 import { Wrapper } from '../ui/Wrapper'
-import { Title } from '../ui/Title'
 import HeartIcon from '../../../public/serce.svg'
 import { motion } from '@/lib/motion'
 import { pulseAnimation } from '@/animations/animations'
+import { Heading } from '../ui/Heading'
 
 export const Contact = () => {
 	return (
@@ -15,7 +15,7 @@ export const Contact = () => {
 			<Wrapper>
 				<div>
 					<div className='text-center'>
-						<Title title='Kontakt' />
+						<Heading as='h1'>Kontakt</Heading>
 					</div>
 					<div className='relative mx-auto mt-12 flex items-center justify-center overflow-hidden pt-20 lg:h-[875px] lg:w-[975px] xl:w-10/12'>
 						<motion.div {...pulseAnimation} className='absolute  left-0  -z-10 hidden aspect-square w-full lg:block'>
@@ -23,7 +23,7 @@ export const Contact = () => {
 						</motion.div>
 						<div className='mb-20 flex flex-col  items-center lg:space-y-8 xl:space-y-10'>
 							<div className='space-y-5 text-center lg:space-y-3 xl:space-y-5'>
-								<h2 className='text-3xl font-[500] lg:text-2xl'>Adres Korespondencyjny</h2>
+								<Heading as='h2' className='text-3xl lg:text-2xl'>Adres Korespondencyjny</Heading>
 								<div className='flex  flex-col gap-2 text-xl font-[500] '>
 									<span>ul. Podtatrzańska 69</span>
 									<span>Nowy Targ 34-400</span>

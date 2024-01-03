@@ -3,10 +3,10 @@ import Image from 'next/image'
 
 import QuoteIcon from '../../../public/quotes.svg'
 import { Wrapper } from '../ui/Wrapper'
-import { Title } from '../ui/Title'
 import { Section } from '../ui/Section'
 import imgWeronika from '../../../public/weronika-minify/Weronika-1.webp'
 import imgHashtag from '../../../public/weronika-minify/Nasza-w-sejmie.webp'
+import { Heading } from '../ui/Heading'
 
 export const AboutMe = () => {
 	return (
@@ -15,7 +15,7 @@ export const AboutMe = () => {
 				<div className='flex flex-col  items-center justify-around gap-5 lg:flex-row xl:justify-between '>
 					<div className='relative text-center text-lg  lg:w-1/2 lg:text-left'>
 						<div className='mb-24 text-center'>
-							<Title title='Kim jestem?' />
+							<Heading as='h1'>Kim jestem?</Heading>
 						</div>
 						<p className='mb-5'>
 							Nazywam się Weronika Smarduch wychowałam się w Nowym Targu, a mieszkam w Łopusznej. Jestem absolwentką
@@ -55,15 +55,15 @@ export const AboutMe = () => {
 					</div>
 					<div className='flex items-end   lg:flex-col'>
 						<div className=' relative aspect-[2] w-[325px] sm:w-[500px] lg:hidden '>
-							<Image src={imgHashtag} alt='Nasza w sejmie' fill placeholder='blur'/>
+							<Image src={imgHashtag} alt='Nasza w sejmie' fill placeholder='blur' />
 						</div>
 						<div>
-							<Image src={imgWeronika} alt='Weronika Smarduch' width={450} height={600} placeholder='blur'/>
+							<Image src={imgWeronika} alt='Weronika Smarduch' width={450} height={600} placeholder='blur' />
 						</div>
 					</div>
 				</div>
 				<div className='relative hidden aspect-[2] w-[500px] lg:block'>
-					<Image src={imgHashtag} alt='Weronika Smarduch' fill className='mt-10' placeholder='blur'/>
+					<Image src={imgHashtag} alt='Weronika Smarduch' fill className='mt-10' placeholder='blur' />
 				</div>
 			</Wrapper>
 		</Section>
