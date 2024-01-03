@@ -10,7 +10,7 @@ export const priorities = [
 	},
 	{
 		title: 'Skuteczna walka ze smogiem!',
-		desc: 'Nie jest możliwy dalszy rozwój truystyki, szczególnie zimowej bez rozwiązania problemu smogu. Będę walczyć o przekierowanie środków z krajowego programu "Czyste powietrze" do budżetów samorządów, w szczególności tych, które pozycjonują się jako ośrodki trurystyczne i uzdrowiskowe. ',
+		desc: 'Nie jest możliwy dalszy rozwój turystyki, szczególnie zimowej bez rozwiązania problemu smogu. Będę walczyć o przekierowanie środków z krajowego programu "Czyste powietrze" do budżetów samorządów, w szczególności tych, które pozycjonują się jako ośrodki trurystyczne i uzdrowiskowe. ',
 		icon: <BsCloudCheck />,
 	},
 	{
