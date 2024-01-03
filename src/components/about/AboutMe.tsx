@@ -5,12 +5,14 @@ import QuoteIcon from '../../../public/quotes.svg'
 import { Wrapper } from '../ui/Wrapper'
 import { Title } from '../ui/Title'
 import { Section } from '../ui/Section'
+import imgWeronika from '../../../public/weronika-minify/Weronika-1.webp'
+import imgHashtag from '../../../public/weronika-minify/Nasza-w-sejmie.webp'
 
 export const AboutMe = () => {
 	return (
 		<Section>
 			<Wrapper>
-				<div className='flex flex-col  items-center justify-around xl:justify-between gap-5 lg:flex-row '>
+				<div className='flex flex-col  items-center justify-around gap-5 lg:flex-row xl:justify-between '>
 					<div className='relative text-center text-lg  lg:w-1/2 lg:text-left'>
 						<div className='mb-24 text-center'>
 							<Title title='Kim jestem?' />
@@ -30,9 +32,9 @@ export const AboutMe = () => {
 							wprowadzenia naszych pomysłów w życie!
 						</p>
 						<p className='mb-5'>
-							Wśród lokalnych ludzi żyje i pracuje, jestem stąd i to się nie zmieni. Nigdy nie odcięłam się od miejsca, z
-							którego pochodzę i nie chowałam się za tytułami czy przywilejami. Z tego miejsca mogę Państwu obiecać, że
-							tak zostanie. Na wszystko, do czego doszłam zapracowałam ja i rzesza ludzi, w tym również Państwo - moi
+							Wśród lokalnych ludzi żyje i pracuje, jestem stąd i to się nie zmieni. Nigdy nie odcięłam się od miejsca,
+							z którego pochodzę i nie chowałam się za tytułami czy przywilejami. Z tego miejsca mogę Państwu obiecać,
+							że tak zostanie. Na wszystko, do czego doszłam zapracowałam ja i rzesza ludzi, w tym również Państwo - moi
 							wyborcy, już dzisiaj pragnę podziękować za zaufanie i życzę nam wszystkim dalszej owocnej współpracy.
 						</p>
 
@@ -52,21 +54,16 @@ export const AboutMe = () => {
 						</div>
 					</div>
 					<div className='flex items-end   lg:flex-col'>
-						<div className=' relative lg:hidden w-[325px] sm:w-[500px] aspect-[2] '>
-							<Image src='/weronika-minify/Nasza-w-sejmie.webp' alt='Weronika Smarduch' fill />
+						<div className=' relative aspect-[2] w-[325px] sm:w-[500px] lg:hidden '>
+							<Image src={imgHashtag} alt='Nasza w sejmie' fill placeholder='blur'/>
 						</div>
 						<div>
-							<Image src='/weronika-minify/Weronika-1.webp' alt='Weronika Smarduch' width={450} height={600} />
+							<Image src={imgWeronika} alt='Weronika Smarduch' width={450} height={600} placeholder='blur'/>
 						</div>
 					</div>
 				</div>
-				<div className='relative hidden lg:block w-[500px] aspect-[2]'>
-					<Image
-						src='/weronika-minify/Nasza-w-sejmie.webp'
-						alt='Weronika Smarduch'
-						fill
-						className='mt-10 '
-					/>
+				<div className='relative hidden aspect-[2] w-[500px] lg:block'>
+					<Image src={imgHashtag} alt='Weronika Smarduch' fill className='mt-10' placeholder='blur'/>
 				</div>
 			</Wrapper>
 		</Section>
