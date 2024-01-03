@@ -1,10 +1,10 @@
 'use client'
 import React, { ReactNode, useState } from 'react'
 import { FaArrowDown } from 'react-icons/fa'
-import { FaArrowUp } from 'react-icons/fa6'
 
 import { motion } from '@/lib/motion'
 import { expandPriorityTextAnimation, priorityCardsAnimation } from '@/animations/animations'
+import { Button } from '../controls/Button'
 
 interface PrioritiesCardProps {
 	title: string
@@ -28,20 +28,20 @@ export const PrioritieCard = ({ title, desc, icon, marginLeft, bg = 'bg-primary'
 		>
 			<div className=' mb-auto max-w-[625px] space-y-10 overflow-hidden text-center lg:text-left'>
 				<h3 className=' text-2xl font-bold md:text-3xl lg:w-[625px]'>{title}</h3>
-				<button
-					onClick={handleRoll}
-					className='mx-auto flex items-center gap-3 rounded-3xl border-[1px] border-white px-3 py-2 text-center transition-colors duration-300 hover:bg-white/10 lg:mx-0'
-				>
+				<Button onClick={handleRoll} variant={'border'} size={'small'} className='mx-auto lg:mx-0 '>
 					{!isRoll ? (
 						<>
 							Rozwiń <FaArrowDown />
 						</>
 					) : (
 						<>
-							Zwiń <FaArrowUp />
+							Zwiń{' '}
+							<span className='rotate-180 transition-all duration-300'>
+								<FaArrowDown />
+							</span>
 						</>
 					)}
-				</button>
+				</Button>
 				<motion.p {...expandPriorityTextAnimation(isRoll)} className={` h-0 text-base lg:text-lg`}>
 					{desc}
 				</motion.p>
