@@ -1,33 +1,40 @@
+import imgZubrzycki from '../../public/team-minify/szymon-zubrzycki.webp'
+import imgNiziol from '../../public/team-minify/tomasz-niziol.webp'
+import imgLewandowski from '../../public/team-minify/przemyslaw-lewandowski.webp'
+import imgNagornik from '../../public/team-minify/bartosz-nagornik.webp'
+import imgJuchniewicz from '../../public/team-minify/filip-juchniewicz.webp'
+import imgWojciak from '../../public/team-minify/piotr-wojciak.webp'
+
 export const team = [
 	{
 		name: 'Szymon Zubrzycki',
 		role: 'Kandydat na posła',
-		src: '/team-minify/szymon-zubrzycki.webp',
+		src: imgZubrzycki,
 	},
 	{
 		name: 'Tomasz Nizioł',
-		src: '/team-minify/tomasz-niziol.webp',
+		src: imgNiziol,
 	},
-    {
-        name: 'Przemysław Lewandowski',
-        src: '/team-minify/przemyslaw-lewandowski.webp',
-    },
+	{
+		name: 'Przemysław Lewandowski',
+		src: imgLewandowski,
+	},
 	{
 		name: 'Bartosz Nagornik',
-		src: '/team-minify/bartosz-nagornik.webp',
+		src: imgNagornik,
 	},
 	{
 		email: 'oficjalny.juchniewicz@gmail.com',
 		name: 'Filip Juchniewicz',
 		role: 'Koordynator ds. wolontariuszy',
 		phone: '+48 535 531 035',
-		src: '/team-minify/filip-juchniewicz.webp',
+		src: imgJuchniewicz,
 	},
 	{
 		email: 'wojciak.oficjalnie@gmail.com',
 		name: 'Piotr Wójciak',
 		role: 'Szef Sztabu',
 		phone: '+48 506 780 245',
-		src: '/team-minify/piotr-wojciak.webp',
+		src: imgWojciak,
 	},
 ]
