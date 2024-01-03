@@ -4,6 +4,7 @@ import React from 'react'
 import HeartIcon from '../../../public/serce.svg'
 import { motion } from '@/lib/motion'
 import { pulseAnimation } from '@/animations/animations'
+import { Card } from './Card'
 
 type ActivitiesCardProps = {
 	title: string
@@ -13,9 +14,7 @@ type ActivitiesCardProps = {
 
 export const ActivitiesCard = ({ desc, title, isHeart = false }: ActivitiesCardProps) => {
 	return (
-		<div
-			className={` flex-1 space-y-20 rounded-md border-[1px] border-darkBlue p-8 text-darkBlue  transition-transform duration-300 hover:scale-[1.012] `}
-		>
+		<Card className='flex-1 space-y-20 border-darkBlue'>
 			<div className='space-y-10'>
 				<h3 className='text-2xl font-[500] md:text-3xl'>{title}</h3>
 				<p className='text-xl '>{desc}</p>
@@ -27,6 +26,6 @@ export const ActivitiesCard = ({ desc, title, isHeart = false }: ActivitiesCardP
 					</div>
 				</motion.div>
 			)}
-		</div>
+		</Card>
 	)
 }
