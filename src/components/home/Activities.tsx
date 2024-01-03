@@ -22,7 +22,7 @@ export const Activities = () => {
 							<ActivitiesCard {...secondCard} />
 						</div>
 					</div>
-					<div className='text-center'>
+					<div className='lg:text-center'>
 						<ActivitiesCard {...thirdCard} />
 					</div>
 				</div>

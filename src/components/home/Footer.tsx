@@ -12,6 +12,7 @@ import { navigation } from '@/constants/navigation'
 import { FooterNav } from './FooterNav'
 import { motion } from '@/lib/motion'
 import { pulseAnimation } from '@/animations/animations'
+import { buttonVariants } from '../controls/Button'
 
 export const Footer = () => {
 	const socialMedia = [
@@ -32,7 +33,11 @@ export const Footer = () => {
 							<motion.div {...pulseAnimation} className=' md:ml-auto'>
 								<Link
 									href={navigation.contact.path}
-									className='rounded-[50px] bg-secondary p-4  px-6 font-[500] text-white transition-colors duration-200 hover:bg-secondaryHover md:ml-auto lg:ml-0 lg:p-5 lg:px-7'
+									className={buttonVariants({
+										variant: 'primary',
+										size: 'default',
+										className: 'bg-secondary hover:bg-secondaryHover md:ml-auto lg:ml-0',
+									})}
 								>
 									Skontaktuj się z nami
 								</Link>
