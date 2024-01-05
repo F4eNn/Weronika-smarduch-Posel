@@ -19,6 +19,7 @@
     "hamburger-react": "^2.5.0",
     "imagemin-cli": "^7.0.0",
     "next": "13.4.19",
+    "plaiceholder": "^3.0.0",
     "postcss": "8.4.29",
     "qs": "^6.11.2",
     "react": "18.2.0",
