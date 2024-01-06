@@ -22,5 +22,5 @@ export const Heading = ({ as, children, className }: HeadingProps) => {
 	if (as === 'h3') {
 		return <h3 className={cn(`text-center text-xl font-bold text-darkBlue `, className)}>{children}</h3>
 	}
-	return <div>Heading</div>
+	return <h4 className={cn(`text-lg font-medium text-darkBlue `, className)}>{children}</h4>
 }
