@@ -2,8 +2,6 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { AiFillFacebook, AiFillInstagram } from 'react-icons/ai'
-import { FaXTwitter } from 'react-icons/fa6'
 import { MdEmail } from 'react-icons/md'
 
 import { Wrapper } from '../ui/Wrapper'
@@ -14,13 +12,10 @@ import { motion } from '@/lib/motion'
 import { pulseAnimation } from '@/animations/animations'
 import { buttonVariants } from '../controls/Button'
 import { Heading } from '../ui/Heading'
+import { SocialMediaLinks } from '../ui/SocialMediaLinks'
 
 export const Footer = () => {
-	const socialMedia = [
-		{ icon: <AiFillFacebook />, url: 'https://www.facebook.com/smarduch.weronika', label: 'facebook' },
-		{ icon: <AiFillInstagram />, url: 'https://www.instagram.com/weronikasmarduch/', label: 'instagram' },
-		{ icon: <FaXTwitter />, url: 'https://twitter.com/WSmarduch ', label: 'twitter' },
-	]
+	const date = new Date().getFullYear()
 	return (
 		<footer className='mt-auto  w-full border-t border-darkBlue pb-3 pt-16'>
 			<Wrapper>
@@ -49,20 +44,7 @@ export const Footer = () => {
 					<div className='flex flex-col items-start justify-between gap-12 lg:flex-row xl:gap-20'>
 						<div className=' flex w-full flex-col flex-wrap items-center gap-10 font-[500] text-darkBlue sm:flex-row  sm:items-start sm:justify-between'>
 							<div className=' flex flex-col items-center gap-8  sm:items-start'>
-								<div className='flex gap-5'>
-									{socialMedia.map(({ icon, url, label }, idx) => (
-										<a
-											aria-label={label}
-											key={idx}
-											target='_blank'
-											rel='noopener'
-											href={url}
-											className='text-4xl transition-all duration-300 hover:scale-110 hover:text-secondary'
-										>
-											{icon}
-										</a>
-									))}
-								</div>
+								<SocialMediaLinks />
 								<div className='space-y-5'>
 									<p className='flex flex-col items-center gap-1 text-center text-lg sm:flex-row'>
 										<MdEmail size='1.5em' />
@@ -77,7 +59,9 @@ export const Footer = () => {
 								</div>
 							</div>
 							<div className='space-y-5 text-center sm:text-left '>
-								<Heading as='h3' className='font-[500]'>Adres do korespondencji</Heading>
+								<Heading as='h3' className='font-[500]'>
+									Adres do korespondencji
+								</Heading>
 								<div className='flex flex-col gap-2  '>
 									<span>ul. Podtatrzańska 69</span>
 									<span>Nowy Targ 34-400</span>
@@ -96,7 +80,7 @@ export const Footer = () => {
 						/>
 					</div>
 					<FooterNav />
-					<p className='mt-20 text-center'>Prawa zastrzeżone &copy; 2023</p>
+					<p className='mt-20 text-center'>Prawa zastrzeżone &copy; {date}</p>
 				</div>
 			</Wrapper>
 		</footer>
