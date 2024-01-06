@@ -1,8 +1,7 @@
 import React from 'react'
 
 import { NewsItem } from './NewsItem'
-import { fetchAPI } from '@/utils/fetch-api'
-import { RootObject } from '@/types/api'
+import { fetchArticles } from './fetchArticles'
 
 type ImageUrl = {
 	url: string
@@ -29,18 +28,7 @@ export type ArticleNewsTypes = {
 }
 
 export const News = async () => {
-	const path = 'articles'
-
-	const urlParamsObject = {
-		sort: ['publishedAt:desc'],
-		fields: ['title', 'description', 'publishedAt'],
-		populate: {
-			hero: {
-				fields: ['formats', 'alternativeText'],
-			},
-		},
-	}
-	const { data } = await fetchAPI<RootObject<ArticleNewsTypes>>(path, urlParamsObject)
+	const { data } = await fetchArticles()
 	return (
 		<div className='space-y-24'>
 			{data.map(({ attributes, id }, idx) => {

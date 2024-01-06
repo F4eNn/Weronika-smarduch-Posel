@@ -8,7 +8,6 @@ import Added from './Added'
 import SeeMoreIcon from '../../../public/see-more.svg'
 import { buttonVariants } from '../controls/Button'
 import { formatDate } from '@/utils/api-helpers'
-import { getBase64 } from '@/utils/base64'
 
 type NewsItemProps = {
 	even?: boolean
@@ -19,16 +18,14 @@ type NewsItemProps = {
 	publishedAt: string
 }
 
-export const NewsItem = async ({ even = false, isNew, description, title, imageUrl, publishedAt }: NewsItemProps) => {
+export const NewsItem = ({ even = false, isNew, description, title, imageUrl, publishedAt }: NewsItemProps) => {
 	const date = formatDate(publishedAt)
-	const blurDataUrl = await getBase64(imageUrl)
-
 	return (
 		<NewsCard>
 			<div className={`flex h-full gap-16 ${even ? 'flex-row-reverse' : ''}`}>
 				<div className={`flex flex-1 flex-col gap-10 p-10 ${even ? 'text-left' : 'text-right'}`}>
 					{isNew && <span className='animate-pulse font-bold text-secondary'>Nowe !</span>}
-					<Heading as='h2' className={`${even ? 'text-left' : 'text-right'} font-semibold float-none`}>
+					<Heading as='h2' className={`${even ? 'text-left' : 'text-right'} float-none font-semibold`}>
 						{title}
 					</Heading>
 					<p className='line-clamp-3'>{description}</p>
@@ -51,8 +48,6 @@ export const NewsItem = async ({ even = false, isNew, description, title, imageU
 						height={450}
 						className='h-full w-full object-cover'
 						alt='test'
-						blurDataURL={blurDataUrl}
-						placeholder='blur'
 					/>
 					<Added isEven={even} date={date} />
 				</div>
