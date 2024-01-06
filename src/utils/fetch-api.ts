@@ -1,6 +1,5 @@
 import qs from 'qs'
 
-
 type APIResponse<T> = T
 
 export const fetchAPI = async <T>(path: string, urlParamsObject = {}, options = {}): Promise<APIResponse<T>> => {
@@ -8,12 +7,12 @@ export const fetchAPI = async <T>(path: string, urlParamsObject = {}, options = 
 		const mergedOptions = {
 			headers: {
 				'Content-Type': 'application/json',
-				Authorization: `Bearer ${process.env.NEXT_STRAPI_TOKEN}`,
+				Authorization: `Bearer ${process.env.NEXT_PUBLIC_STRAPI_TOKEN}`,
 				...options,
 			},
 		}
 		const queryString = qs.stringify(urlParamsObject)
-		const reqURL = `${process.env.NEXT_STRAPI_URL}/api/${path}${queryString ? `?${queryString}` : ''}`
+		const reqURL = `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/${path}${queryString ? `?${queryString}` : ''}`
 
 		const res = await fetch(reqURL, mergedOptions)
 
