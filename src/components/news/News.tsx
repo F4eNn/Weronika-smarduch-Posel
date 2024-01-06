@@ -2,25 +2,30 @@ import React from 'react'
 
 import { NewsItem } from './NewsItem'
 import { fetchAPI } from '@/utils/fetch-api'
-import { getBase64 } from '@/utils/base64'
+import { RootObject } from '@/types/api'
+
+type ImageUrl = {
+	url: string
+}
 
 type ImageStrapi = {
 	formats: {
-		large: {
-			url: string
-		}
+		large: ImageUrl
+		medium: ImageUrl
+		small: ImageUrl
 	}
 }
-type NewsSection = {
+
+export type ArticleNewsTypes = {
 	title: string
 	description: string
-	slug: string
 	hero: {
 		data: {
 			attributes: ImageStrapi
 		}
 	}
 	publishedAt: string
+	post: string
 }
 
 export const News = async () => {
@@ -28,27 +33,24 @@ export const News = async () => {
 
 	const urlParamsObject = {
 		sort: ['publishedAt:desc'],
-		fields: ['title', 'description', 'slug', 'publishedAt'],
+		fields: ['title', 'description', 'publishedAt'],
 		populate: {
 			hero: {
 				fields: ['formats', 'alternativeText'],
 			},
 		},
 	}
-	const { data } = await fetchAPI<NewsSection>(path, urlParamsObject)
-	const imageUrl = data[0].attributes.hero.data.attributes.formats.large.url
-	const blurImageUrl = await getBase64(imageUrl)
-
+	const { data } = await fetchAPI<RootObject<ArticleNewsTypes>>(path, urlParamsObject)
 	return (
 		<div className='space-y-24'>
 			{data.map(({ attributes, id }, idx) => {
 				return (
 					<NewsItem
+						isNew={idx === 0}
 						even={idx % 2 === 1}
 						key={id}
 						{...attributes}
-						imageUrl={attributes.hero.data.attributes.formats.large.url}
-						blurUrl={blurImageUrl ? blurImageUrl : ''}
+						imageUrl={attributes.hero.data.attributes.formats.small.url}
 					/>
 				)
 			})}
