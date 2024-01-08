@@ -10,7 +10,7 @@ type HeadingProps = ChildrenWithProps &
 
 export const Heading = ({ as, children, className }: HeadingProps) => {
 	if (as === 'h1') {
-		return <h1 className={cn('text-center text-4xl font-bold text-darkBlue', className)}>{children}</h1>
+		return <h1 className={cn('text-center text-2xl lg:text-3xl 2xl:text-4xl font-bold text-darkBlue', className)}>{children}</h1>
 	}
 	if (as === 'h2') {
 		return (
