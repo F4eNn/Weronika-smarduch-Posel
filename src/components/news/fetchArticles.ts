@@ -7,7 +7,7 @@ export const fetchArticles = async (pageNumber: number = 1) => {
 
 	const urlParamsObject = {
 		sort: ['publishedAt:desc'],
-		fields: ['title', 'description', 'publishedAt'],
+		fields: ['title', 'description', 'publishedAt', 'slug'],
 		populate: {
 			hero: {
 				fields: ['formats', 'alternativeText'],

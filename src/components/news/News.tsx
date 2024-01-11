@@ -18,6 +18,7 @@ type ImageStrapi = {
 
 export type ArticleNewsTypes = {
 	title: string
+	slug: string
 	description: string
 	hero: {
 		data: {
