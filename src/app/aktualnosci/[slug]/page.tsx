@@ -9,11 +9,11 @@ type ParamsType = {
 }
 
 const ArticlePage = ({ params }: ParamsType) => {
-	const decodedUrl = decodeURIComponent(params.slug)
+	
 	return (
-		<Section>
+		<Section className='mx-0'>
 			<Wrapper>
-				<Article param={decodedUrl} />
+				<Article param={params.slug} />
 			</Wrapper>
 		</Section>
 	)

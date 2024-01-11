@@ -6,7 +6,6 @@ import { Section } from '@/components/ui/Section'
 import { Wrapper } from '@/components/ui/Wrapper'
 import { Heading } from '@/components/ui/Heading'
 import { Error } from '@/components/news/Error'
-import { LoadMore } from '@/components/news/LoadMore'
 
 const NewsPage = () => {
 	return (
@@ -19,7 +18,6 @@ const NewsPage = () => {
 					<ErrorBoundary fallback={<Error />}>
 						<News />
 					</ErrorBoundary>
-					<LoadMore />
 				</Wrapper>
 			</Section>
 		</main>

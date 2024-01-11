@@ -9,16 +9,7 @@
 	.light-shadow {
 		box-shadow: 0 0 10px 1px rgba(117, 117, 117, 0.101);
 	}
-	.colors-300{
-		@apply transition-colors duration-300
+	.colors-300 {
+		@apply transition-colors duration-300;
 	}
-}
-.image {
-	width: max-content;
-	margin: 0 auto;
-}
-.image-style-side {
-	margin: 0 0 30px 30px;
-	width: 45%;
-	float: right;
 }
