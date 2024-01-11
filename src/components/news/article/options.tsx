@@ -19,15 +19,27 @@ export const options: HTMLReactParserOptions = {
 					)
 
 				case 'ol':
-					return <ol className='float-none ml-10 list-decimal'>{domToReact(domNode.children as DOMNode[], options)}</ol>
+					return <ol className='float-none ml-5 sm:ml-10 space-y-2 list-decimal'>{domToReact(domNode.children as DOMNode[], options)}</ol>
 
 				case 'ul':
-					return <ul className='float-none ml-10 list-disc'>{domToReact(domNode.children as DOMNode[], options)}</ul>
+					return <ul className='float-none ml-5 sm:ml-10 space-y-2 list-disc'>{domToReact(domNode.children as DOMNode[], options)}</ul>
 
 				case 'img':
-					const { src, alt, width } = domNode.attribs
+					const { alt, width } = domNode.attribs
+					const { srcset } = domNode.attribs
+					const images = srcset.split(',').filter(i => i.trim() !== '')
+					const src = images.at(-1)?.split(' ')[0]
+		
 					const widthImg = Number(width.replace('px', '').trim())
-					return <Image src={src} alt={alt} width={widthImg} height={500} className='rounded-sm' />
+					return (
+						<Image
+							src={src ?? ''}
+							alt={alt}
+							width={widthImg}
+							height={500}
+							className='max-h-[500px] w-full rounded-sm object-cover'
+						/>
+					)
 				case 'a':
 					const { href } = domNode.attribs
 					return (

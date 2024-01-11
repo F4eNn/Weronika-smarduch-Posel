@@ -41,18 +41,18 @@ export const Article = async ({ param }: ArticleProps) => {
 	const bluredURL = await getBase64(imageURL)
 
 	return (
-		<div>
-			<div className='flex max-h-[450px] gap-20'>
-				<div className='flex w-1/2 flex-col gap-24 '>
+		<div className='mb-32 xl:mb-48'>
+			<div className='2xl-gap-20 flex flex-col gap-14 md:h-[500px] md:flex-row lg:mx-4'>
+				<div className='mx-4 flex flex-col gap-10 md:w-1/2  lg:mx-0 xl:gap-16'>
 					<Added isEven={false} position='static' date={formatedDate} />
-					<div className='space-y-14'>
+					<div className='md:space-12 space-y-8'>
 						<Heading as='h1' className='text-left'>
 							{title}
 						</Heading>
-						<p>{description}</p>
+						<p className='text-sm lg:text-base'>{description}</p>
 					</div>
 				</div>
-				<div className='w-1/2 '>
+				<div className='h-[350px] w-full md:h-auto md:w-1/2'>
 					<Image
 						src={imageURL}
 						placeholder='blur'
@@ -60,27 +60,31 @@ export const Article = async ({ param }: ArticleProps) => {
 						alt=''
 						width={450}
 						height={450}
-						className='h-[450px] w-full rounded-sm object-cover'
+						className='h-full w-full rounded-sm object-cover'
 					/>
 				</div>
 			</div>
-			<div className='mt-20 grid grid-cols-4 gap-10'>
-				<div className='col-span-3 space-y-10 bg-white p-10 shadow-2xl'>{parse(post, options)}</div>
-				<div>
-					<div className='sticky top-[100px] '>
-						<div className='h-2 w-full rounded-full bg-secondary '></div>
+			<div className='mx-4 -mt-16 grid grid-cols-4 gap-y-20 md:mt-20 xl:gap-10'>
+				<div className='col-span-4 mx-auto space-y-10 rounded-md bg-white p-5 shadow-2xl lg:container sm:p-10 xl:col-span-3'>
+					{parse(post, options)}
+				</div>
+				<div className='max-xl:col-span-4 '>
+					<div className='sticky top-[100px] text-ellipsis  truncate'>
+						<div className=' h-1 w-[125px] rounded-full bg-secondary xl:h-2 xl:w-auto'></div>
 						<Heading as='h3' className='my-3.5 text-left font-medium text-black'>
 							Powiązane artykuły
 						</Heading>
 						<hr />
-						<RelatedLink href='/' title='jakiś link' />
+						<RelatedLink href='/' title='' />
 						<hr />
-						<RelatedLink href='/' title='jakiś link długi link z domeną' />
+						<RelatedLink href='/' title='http://localhost:3000/aktualnosci/' />
 						<hr />
-						<Heading as='h4' className='my-3.5 mb-5  text-black'>
-							Zobacz również
-						</Heading>
-						<SocialMediaLinks gap='gap-8' />
+						<div className='hidden xl:block '>
+							<Heading as='h4' className='my-3.5 mb-5  text-black'>
+								Zobacz również
+							</Heading>
+							<SocialMediaLinks gap='gap-8' />
+						</div>
 					</div>
 				</div>
 			</div>
