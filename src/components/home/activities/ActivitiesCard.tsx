@@ -1,10 +1,11 @@
 'use client'
 import React from 'react'
 
-import HeartIcon from '../../../public/serce.svg'
-import { motion } from '@/lib/motion'
 import { pulseAnimation } from '@/animations/animations'
+import { motion } from '@/lib/motion'
+
 import { Card } from './Card'
+import HeartIcon from '../../../../public/serce.svg'
 
 type ActivitiesCardProps = {
 	title: string

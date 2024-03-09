@@ -1,12 +1,13 @@
 'use client'
 import React, { useState, useEffect, useRef } from 'react'
 
-import { fetchArticles } from './fetchArticles'
+import { useObserver } from '@/hooks/use-observer'
 import { Data } from '@/types/api'
+
 import { ArticleNewsTypes } from './News'
 import { NewsItem } from './NewsItem'
-import { LoadingSpinner } from '../ui/LoadingSpinner'
-import { useObserver } from '@/hooks/use-observer'
+import { fetchArticles } from './utils/fetchArticles'
+import { LoadingSpinner } from '../global/ui/LoadingSpinner'
 
 export const LoadMore = () => {
 	const [pageNumber, setPageNumber] = useState(2)
@@ -40,6 +41,7 @@ export const LoadMore = () => {
 		if (isVisible && !isFull && !isFetching) {
 			loadMoreArticles()
 		}
+		// eslint-disable-next-line no-empty-function
 		return () => {}
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [isVisible])

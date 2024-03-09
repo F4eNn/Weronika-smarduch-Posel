@@ -1,8 +1,8 @@
-import Link from 'next/link'
-import Image from 'next/image'
 import { domToReact, HTMLReactParserOptions, Element, DOMNode } from 'html-react-parser'
+import Image from 'next/image'
+import Link from 'next/link'
 
-import { Heading } from '@/components/ui/Heading'
+import { Heading } from '@/components/global/ui/Heading'
 
 export const options: HTMLReactParserOptions = {
 	replace(domNode) {
@@ -19,17 +19,25 @@ export const options: HTMLReactParserOptions = {
 					)
 
 				case 'ol':
-					return <ol className='float-none ml-5 sm:ml-10 space-y-2 list-decimal'>{domToReact(domNode.children as DOMNode[], options)}</ol>
+					return (
+						<ol className='float-none ml-5 list-decimal space-y-2 sm:ml-10'>
+							{domToReact(domNode.children as DOMNode[], options)}
+						</ol>
+					)
 
 				case 'ul':
-					return <ul className='float-none ml-5 sm:ml-10 space-y-2 list-disc'>{domToReact(domNode.children as DOMNode[], options)}</ul>
+					return (
+						<ul className='float-none ml-5 list-disc space-y-2 sm:ml-10'>
+							{domToReact(domNode.children as DOMNode[], options)}
+						</ul>
+					)
 
 				case 'img':
 					const { alt, width } = domNode.attribs
 					const { srcset } = domNode.attribs
 					const images = srcset.split(',').filter(i => i.trim() !== '')
 					const src = images.at(-1)?.split(' ')[0]
-		
+
 					const widthImg = Number(width.replace('px', '').trim())
 					return (
 						<Image

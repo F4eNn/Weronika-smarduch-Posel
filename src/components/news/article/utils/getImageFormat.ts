@@ -1,4 +1,4 @@
-import { ArticleNewsTypes } from '../News'
+import { ArticleNewsTypes } from '../../News'
 
 export const getImage = ({ data }: Pick<ArticleNewsTypes['hero'], 'data'>) => {
 	const formats = ['large', 'medium', 'small']

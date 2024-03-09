@@ -6,6 +6,8 @@ type OpengraphProps = {
 	description: string
 }
 
+export const size = { width: 1200, height: 630 }
+
 export const Opengraph = ({ title, description }: OpengraphProps) => {
 	return (
 		<div tw='flex relative z-0 bg-white flex-col h-full w-full'>
@@ -17,7 +19,11 @@ export const Opengraph = ({ title, description }: OpengraphProps) => {
 				</div>
 			</div>
 			<div tw='h-1/2 w-full bg-[#d72748] '></div>
-			<img tw='flex flex-1 absolute right-0 bottom-0 w-[300px] z-50' src={`${process.env.NEXT_PUBLIC_URL}/weronika-stoi.png`} alt="Weronika Smarduch" />
+			<img
+				tw='flex flex-1 absolute right-0 bottom-0 w-[300px]  z-50'
+				src={`${process.env.NEXT_PUBLIC_URL}/weronika-stoi.png`}
+				alt='Weronika Smarduch'
+			/>
 		</div>
 	)
 }

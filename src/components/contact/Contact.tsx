@@ -1,13 +1,14 @@
 'use client'
-import React from 'react'
+
 import { MdEmail } from 'react-icons/md'
 
-import { Section } from '../ui/Section'
-import { Wrapper } from '../ui/Wrapper'
-import HeartIcon from '../../../public/serce.svg'
-import { motion } from '@/lib/motion'
 import { pulseAnimation } from '@/animations/animations'
-import { Heading } from '../ui/Heading'
+import { motion } from '@/lib/motion'
+
+import HeartIcon from '../../../public/serce.svg'
+import { Heading } from '../global/ui/Heading'
+import { Section } from '../global/ui/Section'
+import { Wrapper } from '../global/ui/Wrapper'
 
 export const Contact = () => {
 	return (
@@ -23,7 +24,9 @@ export const Contact = () => {
 						</motion.div>
 						<div className='mb-20 flex flex-col  items-center lg:space-y-8 xl:space-y-10'>
 							<div className='space-y-5 text-center lg:space-y-3 xl:space-y-5'>
-								<Heading as='h2' className='text-3xl lg:text-2xl'>Adres Korespondencyjny</Heading>
+								<Heading as='h2' className='text-3xl lg:text-2xl'>
+									Adres Korespondencyjny
+								</Heading>
 								<div className='flex  flex-col gap-2 text-xl font-[500] '>
 									<span>ul. Podtatrzańska 69</span>
 									<span>Nowy Targ 34-400</span>

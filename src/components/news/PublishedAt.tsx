@@ -6,7 +6,7 @@ type AddedProps = {
 	position?: 'static' | 'absolute'
 }
 
-const Added = ({ isEven, date, position = 'absolute' }: AddedProps) => {
+export const PublishedAt = ({ isEven, date, position = 'absolute' }: AddedProps) => {
 	return (
 		<div
 			className={`${position} ${isEven ? '-right-10 max-lg:right-0' : '-left-10 max-lg:left-0'} top-0 w-max bg-secondary px-9 ${
@@ -17,5 +17,3 @@ const Added = ({ isEven, date, position = 'absolute' }: AddedProps) => {
 		</div>
 	)
 }
-
-export default Added

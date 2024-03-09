@@ -8,13 +8,16 @@ const nextConfig = {
 		return config
 	},
 	images: {
-		remotePatterns: [{
-			protocol: 'https',
-			hostname: 'res.cloudinary.com',
-			port: '',
-			pathname: `/${process.env.NEXT_PUBLIC_CLOUDINARY_NAME}/image/upload/**`
-		}]
-	}
+		remotePatterns: [
+			{
+				protocol: 'https',
+				hostname: 'res.cloudinary.com',
+				port: '',
+				pathname: `/${process.env.NEXT_PUBLIC_CLOUDINARY_NAME}/image/upload/**`,
+			},
+		],
+		domains: ['localhost']
+	},
 }
 
 module.exports = nextConfig

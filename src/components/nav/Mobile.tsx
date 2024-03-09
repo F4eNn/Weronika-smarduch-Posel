@@ -1,13 +1,15 @@
 'use client'
 import React, { MouseEvent, useEffect, useRef, useState } from 'react'
+
 import { Sling as Hamburger } from 'hamburger-react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
-import { Logo } from '../ui/Logo'
+import { mobileMenuAnimation } from '@/animations/animations'
 import { linksArray } from '@/constants/navigation'
 import { AnimatePresence, motion } from '@/lib/motion'
-import { mobileMenuAnimation } from '@/animations/animations'
+
+import { Logo } from '../global/ui/Logo'
 
 export const Mobile = () => {
 	const [isOpen, setIsOpen] = useState(false)
@@ -48,7 +50,7 @@ export const Mobile = () => {
 						{...mobileMenuAnimation}
 						ref={overlayRef}
 						onClick={handleCloseOverlay}
-						className='fixed left-0 top-0 z-10 h-full w-full bg-black/50'
+						className='fixed left-0 top-0 z-10 size-full bg-black/50'
 					>
 						<div className='ml-auto flex h-full w-3/4 justify-center  bg-darkBlue pt-[150px]'>
 							<motion.ul className='space-y-10 text-xl'>

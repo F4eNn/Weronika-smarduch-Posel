@@ -1,18 +1,18 @@
-import React from 'react'
-import Image from 'next/image'
 import parse from 'html-react-parser'
+import Image from 'next/image'
 
-import { fetchAPI } from '@/utils/fetch-api'
-import { ArticleNewsTypes } from '../News'
+import { SocialMediaLinks } from '@/components/global/ui/SocialMediaLinks'
 import { Data } from '@/types/api'
-import Added from '../Added'
 import { formatDate } from '@/utils/api-helpers'
-import { Heading } from '../../ui/Heading'
 import { getBase64 } from '@/utils/base64'
-import { SocialMediaLinks } from '../../ui/SocialMediaLinks'
-import { RelatedLink } from './RelatedLink'
+import { fetchApi } from '@/utils/fetch-api'
+
 import { options } from './options'
-import { getImage } from './getImageFormat'
+import { RelatedLink } from './RelatedLink'
+import { getImage } from './utils/getImageFormat'
+import { Heading } from '../../global/ui/Heading'
+import { ArticleNewsTypes } from '../News'
+import { PublishedAt } from '../PublishedAt'
 
 type ArticleProps = {
 	param: string
@@ -33,19 +33,20 @@ export const Article = async ({ param }: ArticleProps) => {
 			},
 		},
 	}
-	const { data } = await fetchAPI<ArticleContent>(path, urlParamsObject)
+	const { data } = await fetchApi<ArticleContent>(path, urlParamsObject)
+
 	const { description, hero, publishedAt, title, post } = data.attributes
 
 	const formatedDate = formatDate(publishedAt, false)
-	const imageURL = getImage(hero)
-	const bluredURL = await getBase64(imageURL)
+	const imageUrl = `${process.env.NEXT_PUBLIC_URL}${getImage(hero)}`
+	const bluredUrl = await getBase64(imageUrl)
 
 	return (
 		<div className='mb-32 xl:mb-48'>
-			<div className='2xl-gap-20 flex flex-col gap-14 md:h-[500px] md:flex-row lg:mx-4'>
+			<div className='flex flex-col gap-14 md:h-[500px] md:flex-row lg:mx-4 2xl:gap-20'>
 				<div className='mx-4 flex flex-col gap-10 md:w-1/2  lg:mx-0 xl:gap-16'>
-					<Added isEven={false} position='static' date={formatedDate} />
-					<div className='md:space-12 space-y-8'>
+					<PublishedAt isEven={false} position='static' date={formatedDate} />
+					<div className='space-y-8 md:space-y-12'>
 						<Heading as='h1' className='text-left'>
 							{title}
 						</Heading>
@@ -54,13 +55,13 @@ export const Article = async ({ param }: ArticleProps) => {
 				</div>
 				<div className='h-[350px] w-full md:h-auto md:w-1/2'>
 					<Image
-						src={imageURL}
+						src={imageUrl}
 						placeholder='blur'
-						blurDataURL={bluredURL}
+						blurDataURL={bluredUrl}
 						alt=''
 						width={450}
 						height={450}
-						className='h-full w-full rounded-sm object-cover'
+						className='size-full rounded-sm object-cover'
 					/>
 				</div>
 			</div>
@@ -69,7 +70,7 @@ export const Article = async ({ param }: ArticleProps) => {
 					{parse(post, options)}
 				</div>
 				<div className='max-xl:col-span-4 '>
-					<div className='sticky top-[100px] text-ellipsis  truncate'>
+					<div className='sticky top-[100px] truncate'>
 						<div className=' h-1 w-[125px] rounded-full bg-secondary xl:h-2 xl:w-auto'></div>
 						<Heading as='h3' className='my-3.5 text-left font-medium text-black'>
 							Powiązane artykuły

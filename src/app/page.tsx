@@ -1,8 +1,8 @@
 import { Metadata } from 'next'
 
-import { Activities } from '@/components/home/Activities'
+import { Activities } from '@/components/home/activities/Activities'
 import { Hero } from '@/components/home/Hero'
-import { Priorities } from '@/components/home/Priorities'
+import { Priorities } from '@/components/home/priorities/Priorities'
 
 export const metadata: Metadata = {
 	title: 'Weronika Smarduch',

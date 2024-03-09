@@ -1,4 +1,5 @@
 import React, { ComponentProps } from 'react'
+
 import { cva, VariantProps } from 'class-variance-authority'
 
 import { cn } from '@/utils/cn'
@@ -6,7 +7,7 @@ import { cn } from '@/utils/cn'
 const CardVariants = cva('rounded-md text-darkBlue ', {
 	variants: {
 		variant: {
-			border: 'border-[1px] hover:scale-[1.012] transition-transform duration-300',
+			border: 'border-[1px] transition-transform duration-300 hover:scale-[1.012]',
 		},
 		size: {
 			default: 'p-8',

@@ -1,12 +1,11 @@
-import React from 'react'
 import Image from 'next/image'
 
 import QuoteIcon from '../../../public/quotes.svg'
-import { Wrapper } from '../ui/Wrapper'
-import { Section } from '../ui/Section'
-import imgWeronika from '../../../public/weronika-minify/Weronika-1.webp'
 import imgHashtag from '../../../public/weronika-minify/Nasza-w-sejmie.webp'
-import { Heading } from '../ui/Heading'
+import imgWeronika from '../../../public/weronika-minify/Weronika-1.webp'
+import { Heading } from '../global/ui/Heading'
+import { Section } from '../global/ui/Section'
+import { Wrapper } from '../global/ui/Wrapper'
 
 export const AboutMe = () => {
 	return (
@@ -46,10 +45,10 @@ export const AboutMe = () => {
 								<li>Aby problemy lokalnych społeczeństw zawszy były priorytetem.</li>
 							</ul>
 						</div>
-						<div className='absolute right-0 top-16 -z-10 h-40 w-40 fill-darkBlue/10'>
+						<div className='absolute right-0 top-16 -z-10 size-40 fill-darkBlue/10'>
 							<QuoteIcon />
 						</div>
-						<div className='absolute -right-3 top-16 -z-10 h-14 w-14 fill-darkBlue lg:-right-5'>
+						<div className='absolute -right-3 top-16 -z-10 size-14 fill-darkBlue lg:-right-5'>
 							<QuoteIcon />
 						</div>
 					</div>

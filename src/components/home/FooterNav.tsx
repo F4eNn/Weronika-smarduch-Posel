@@ -1,6 +1,7 @@
 'use client'
-import Link from 'next/link'
 import React from 'react'
+
+import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
 import { linksArray } from '@/constants/navigation'
