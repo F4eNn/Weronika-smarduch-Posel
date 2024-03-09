@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
-import { fetchAPI } from '@/utils/fetch-api'
 import { RootObject } from '@/types/api'
+import { fetchApi } from '@/utils/fetch-api'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 	const baseUrl = 'https://www.weronika-smarduch.pl/'
@@ -14,13 +14,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 		fields: ['slug', 'updatedAt'],
 	}
 
-	const articles = await fetchAPI<RootObject<{ slug: string; updatedAt: Date }>>(path, urlParamsObject)
-	const articlesUrl = articles.data.map(i => {
-		return {
-			url: `${baseUrl}aktualnosci/${i.attributes.slug}`,
-			lastModified: i.attributes.updatedAt,
-		}
-	}) ?? []
+	const articles = await fetchApi<RootObject<{ slug: string; updatedAt: Date }>>(path, urlParamsObject)
+	const articlesUrl =
+		articles.data.map(i => {
+			return {
+				url: `${baseUrl}aktualnosci/${i.attributes.slug}`,
+				lastModified: i.attributes.updatedAt,
+			}
+		}) ?? []
 
 	return [
 		{
@@ -47,6 +48,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 			changeFrequency: 'yearly',
 			priority: 0.8,
 		},
-		...articlesUrl
+		...articlesUrl,
 	]
 }

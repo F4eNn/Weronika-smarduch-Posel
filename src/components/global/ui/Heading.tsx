@@ -1,4 +1,4 @@
-import React, { ComponentProps } from 'react'
+import { ComponentProps } from 'react'
 
 import { ChildrenWithProps } from '@/types/general'
 import { cn } from '@/utils/cn'
@@ -10,14 +10,14 @@ type HeadingProps = ChildrenWithProps &
 
 export const Heading = ({ as, children, className }: HeadingProps) => {
 	if (as === 'h1') {
-		return <h1 className={cn('text-center text-2xl lg:text-3xl 2xl:text-4xl font-bold text-darkBlue', className)}>{children}</h1>
+		return (
+			<h1 className={cn('text-center text-2xl font-bold text-darkBlue lg:text-3xl 2xl:text-4xl', className)}>
+				{children}
+			</h1>
+		)
 	}
 	if (as === 'h2') {
-		return (
-			<h2 className={cn('text-center text-xl text-darkBlue font-[500] lg:text-2xl', className)}>
-				{children}
-			</h2>
-		)
+		return <h2 className={cn('text-center text-xl font-[500] text-darkBlue lg:text-2xl', className)}>{children}</h2>
 	}
 	if (as === 'h3') {
 		return <h3 className={cn(`text-center text-xl font-bold text-darkBlue `, className)}>{children}</h3>

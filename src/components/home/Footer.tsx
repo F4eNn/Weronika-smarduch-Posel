@@ -1,18 +1,20 @@
 'use client'
 import React from 'react'
-import Link from 'next/link'
+
 import Image from 'next/image'
+import Link from 'next/link'
 import { MdEmail } from 'react-icons/md'
 
-import { Wrapper } from '../ui/Wrapper'
-import { Logo } from '../ui/Logo'
-import { navigation } from '@/constants/navigation'
-import { FooterNav } from './FooterNav'
-import { motion } from '@/lib/motion'
 import { pulseAnimation } from '@/animations/animations'
+import { navigation } from '@/constants/navigation'
+import { motion } from '@/lib/motion'
+
+import { FooterNav } from './FooterNav'
 import { buttonVariants } from '../controls/Button'
-import { Heading } from '../ui/Heading'
-import { SocialMediaLinks } from '../ui/SocialMediaLinks'
+import { Heading } from '../global/ui/Heading'
+import { Logo } from '../global/ui/Logo'
+import { SocialMediaLinks } from '../global/ui/SocialMediaLinks'
+import { Wrapper } from '../global/ui/Wrapper'
 
 export const Footer = () => {
 	const date = new Date().getFullYear()
@@ -77,6 +79,7 @@ export const Footer = () => {
 							width={500}
 							height={200}
 							className='mx-auto inline-block'
+							style={{ width: '500px', height: 'auto' }}
 						/>
 					</div>
 					<FooterNav />

@@ -1,8 +1,8 @@
 import React from 'react'
 
-import { NewsItem } from './NewsItem'
-import { fetchArticles } from './fetchArticles'
 import { LoadMore } from './LoadMore'
+import { NewsItem } from './NewsItem'
+import { fetchArticles } from './utils/fetchArticles'
 
 type ImageUrl = {
 	url: string

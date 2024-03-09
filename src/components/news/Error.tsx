@@ -1,10 +1,11 @@
 'use client'
 import React from 'react'
-import { useRouter } from 'next/navigation'
+
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 
 import { Button, buttonVariants } from '../controls/Button'
-import { Heading } from '../ui/Heading'
+import { Heading } from '../global/ui/Heading'
 
 export const Error = () => {
 	const { refresh } = useRouter()
@@ -17,7 +18,7 @@ export const Error = () => {
 			<Heading as='h3' className='font-normal'>
 				Spróboj ponownie lub wróć na stronę główną{' '}
 			</Heading>
-			<div className='flex justify-around my-10'>
+			<div className='my-10 flex justify-around'>
 				<Button
 					onClick={refresh}
 					className={buttonVariants({

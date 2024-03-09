@@ -1,12 +1,13 @@
 import React from 'react'
+
 import { Metadata } from 'next'
 
+import { Section } from '@/components/global/ui/Section'
+import { Wrapper } from '@/components/global/ui/Wrapper'
 import { Article } from '@/components/news/article/Article'
-import { Section } from '@/components/ui/Section'
-import { Wrapper } from '@/components/ui/Wrapper'
-import { fetchAPI } from '@/utils/fetch-api'
-import { Data } from '@/types/api'
 import { FALLBACK_SEO } from '@/constants/fallback-seo'
+import { Data } from '@/types/api'
+import { fetchApi } from '@/utils/fetch-api'
 
 type ParamsType = {
 	params: { slug: string }
@@ -29,9 +30,9 @@ export async function generateMetadata({ params }: ParamsType): Promise<Metadata
 			},
 		},
 	}
-	const page = await fetchAPI<MetadataApiTypes>(path, urlParamsObject)
-	if (!page.data.attributes?.seo[0]) return FALLBACK_SEO
-	const metadata = page.data.attributes.seo[0]
+	const page = await fetchApi<MetadataApiTypes>(path, urlParamsObject)
+	if (!page.data.attributes.seo[0]) return FALLBACK_SEO
+	const [metadata] = page.data.attributes.seo
 
 	return {
 		title: metadata.metaTitle,
@@ -40,7 +41,6 @@ export async function generateMetadata({ params }: ParamsType): Promise<Metadata
 		alternates: { canonical: `/aktualnosci/${params.slug}` },
 	}
 }
-
 
 const ArticlePage = ({ params }: ParamsType) => {
 	return (

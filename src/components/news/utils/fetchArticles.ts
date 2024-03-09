@@ -1,6 +1,7 @@
 import { RootObject } from '@/types/api'
-import { fetchAPI } from '@/utils/fetch-api'
-import { ArticleNewsTypes } from './News'
+import { fetchApi } from '@/utils/fetch-api'
+
+import { ArticleNewsTypes } from '../News'
 
 export const fetchArticles = async (pageNumber: number = 1) => {
 	const path = 'articles'
@@ -18,6 +19,6 @@ export const fetchArticles = async (pageNumber: number = 1) => {
 			page: pageNumber,
 		},
 	}
-	const { data, meta } = await fetchAPI<RootObject<ArticleNewsTypes>>(path, urlParamsObject)
+	const { data, meta } = await fetchApi<RootObject<ArticleNewsTypes>>(path, urlParamsObject)
 	return { data, meta }
 }

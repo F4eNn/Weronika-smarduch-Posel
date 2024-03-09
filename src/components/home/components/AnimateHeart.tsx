@@ -1,8 +1,8 @@
 'use client'
 import React, { useState } from 'react'
 
-import { motion } from '@/lib/motion'
 import { pathVariants, pulseAnimation } from '@/animations/animations'
+import { motion } from '@/lib/motion'
 
 export const AnimateHeart = () => {
 	const [isCompleteAnimation, setIsCompleteAnimation] = useState(false)

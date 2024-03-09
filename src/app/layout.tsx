@@ -1,9 +1,11 @@
-import './globals.css'
-import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
 
 import { Footer } from '@/components/home/Footer'
 import { Nav } from '@/components/nav/Nav'
+
+import type { Metadata } from 'next'
+
+import './globals.css'
 
 const poppins = Poppins({ subsets: ['latin'], weight: ['400', '500', '600', '700'] })
 
@@ -15,9 +17,9 @@ export const metadata: Metadata = {
 	},
 	description: 'Weronika Smarduch Posłanka na Sejm RP',
 	icons: {
-		icon: ['/favicon.ico?v=2'],
 		apple: ['/apple-touch-icon.png?v=2'],
 		shortcut: ['/apple-touch-icon.png?v=2'],
+		icon: ['/favicon.ico?v=2'],
 	},
 	manifest: '/site.webmanifest',
 }

@@ -1,13 +1,15 @@
 import React from 'react'
-import Link from 'next/link'
-import Image from 'next/image'
 
-import { NewsCard } from '../ui/NewsCard'
-import { Heading } from '../ui/Heading'
-import Added from './Added'
+import Image from 'next/image'
+import Link from 'next/link'
+
+import { formatDate } from '@/utils/api-helpers'
+
+import { NewsCard } from './NewsCard'
+import { PublishedAt } from './PublishedAt'
 import SeeMoreIcon from '../../../public/see-more.svg'
 import { buttonVariants } from '../controls/Button'
-import { formatDate } from '@/utils/api-helpers'
+import { Heading } from '../global/ui/Heading'
 
 type NewsItemProps = {
 	even?: boolean
@@ -25,8 +27,14 @@ export const NewsItem = ({ even = false, isNew, slug, description, title, imageU
 		<NewsCard>
 			<div className={`flex h-full gap-3 max-lg:flex-col lg:gap-16 ${!even ? 'flex-row-reverse' : ''}`}>
 				<div className='relative h-[300px] w-full lg:h-full lg:w-[400px]'>
-					<Image src={imageUrl} width={450} height={450} className='h-full w-full object-cover' alt='test' />
-					<Added isEven={even} date={date} />
+					<Image
+						src={`${process.env.NEXT_PUBLIC_URL}${imageUrl}`}
+						width={450}
+						height={450}
+						className='size-full object-cover'
+						alt='test'
+					/>
+					<PublishedAt isEven={even} date={date} />
 				</div>
 				<div className={`flex flex-1 flex-col gap-5 p-5 lg:p-10 ${even ? 'text-left' : 'lg:text-right'}`}>
 					{isNew && <span className='animate-pulse font-bold text-secondary'>Nowe !</span>}

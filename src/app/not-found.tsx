@@ -1,9 +1,10 @@
 import React from 'react'
+
 import Link from 'next/link'
 
-import { Heading } from '@/components/ui/Heading'
-import { Section } from '@/components/ui/Section'
 import { buttonVariants } from '@/components/controls/Button'
+import { Heading } from '@/components/global/ui/Heading'
+import { Section } from '@/components/global/ui/Section'
 
 const notFound = () => {
 	return (

@@ -1,9 +1,9 @@
-import imgZubrzycki from '../../public/team-minify/szymon-zubrzycki.webp'
-import imgNiziol from '../../public/team-minify/tomasz-niziol.webp'
-import imgLewandowski from '../../public/team-minify/przemyslaw-lewandowski.webp'
 import imgNagornik from '../../public/team-minify/bartosz-nagornik.webp'
 import imgJuchniewicz from '../../public/team-minify/filip-juchniewicz.webp'
 import imgWojciak from '../../public/team-minify/piotr-wojciak.webp'
+import imgLewandowski from '../../public/team-minify/przemyslaw-lewandowski.webp'
+import imgZubrzycki from '../../public/team-minify/szymon-zubrzycki.webp'
+import imgNiziol from '../../public/team-minify/tomasz-niziol.webp'
 
 export const team = [
 	{

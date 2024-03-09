@@ -1,8 +1,8 @@
 import qs from 'qs'
 
-type APIResponse<T> = T
+type ApiResponse<T> = T
 
-export const fetchAPI = async <T>(path: string, urlParamsObject = {}, options = {}): Promise<APIResponse<T>> => {
+export const fetchApi = async <T>(path: string, urlParamsObject = {}, options = {}): Promise<ApiResponse<T>> => {
 	try {
 		const mergedOptions = {
 			headers: {
@@ -12,9 +12,9 @@ export const fetchAPI = async <T>(path: string, urlParamsObject = {}, options = 
 			},
 		}
 		const queryString = qs.stringify(urlParamsObject)
-		const reqURL = `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/${path}${queryString ? `?${queryString}` : ''}`
+		const reqUrl = `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/${path}${queryString ? `?${queryString}` : ''}`
 
-		const res = await fetch(reqURL, mergedOptions)
+		const res = await fetch(reqUrl, mergedOptions)
 
 		if (!res.ok) {
 			throw new Error('Invalid response')

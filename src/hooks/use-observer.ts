@@ -4,7 +4,7 @@ export const useObserver = (ref: RefObject<HTMLDivElement>) => {
 	const [isVisible, setIsVisible] = useState(false)
 
 	const callbackIntersection = (entries: IntersectionObserverEntry[]) => {
-		const firstEntry = entries[0]
+		const [firstEntry] = entries
 		setIsVisible(firstEntry.isIntersecting)
 	}
 	const options = {
@@ -24,7 +24,7 @@ export const useObserver = (ref: RefObject<HTMLDivElement>) => {
 				observer.disconnect()
 			}
 		}
-	// eslint-disable-next-line react-hooks/exhaustive-deps
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [ref])
 	return { isVisible }
 }

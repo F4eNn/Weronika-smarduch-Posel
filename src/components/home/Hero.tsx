@@ -1,9 +1,11 @@
 import React from 'react'
+
 import Image from 'next/image'
 
-import { Wrapper } from '@/components/ui/Wrapper'
-import { AnimateHeart } from '../ui/AnimateHeart'
-import { RevealAnimation } from '../ui/RevealAnimation'
+import { Wrapper } from '@/components/global/ui/Wrapper'
+
+import { AnimateHeart } from './components/AnimateHeart'
+import { RevealAnimation } from '../global/ui/RevealAnimation'
 
 export const Hero = () => {
 	return (
@@ -24,7 +26,7 @@ export const Hero = () => {
 							<span>Nr 1 na liście Koalicji Obywatelskiej w okręgu 14 sądecko-podhalańskim</span>
 						</h1>
 					</RevealAnimation>
-					<div className='absolute  hidden  -rotate-45 md:bottom-0 md:left-1/2 md:block md:h-[175px] md:w-[175px] lg:bottom-16 lg:h-[250px] lg:w-[250px]'>
+					<div className='absolute  hidden  -rotate-45 md:bottom-0 md:left-1/2 md:block md:size-[175px] lg:bottom-16 lg:size-[250px]'>
 						<AnimateHeart />
 					</div>
 				</div>

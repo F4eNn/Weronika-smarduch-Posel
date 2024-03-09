@@ -1,16 +1,18 @@
 import React from 'react'
-import { ErrorBoundary } from 'react-error-boundary'
-import { Metadata } from 'next'
 
-import { News } from '@/components/news/News'
-import { Section } from '@/components/ui/Section'
-import { Wrapper } from '@/components/ui/Wrapper'
-import { Heading } from '@/components/ui/Heading'
+import { Metadata } from 'next'
+import { ErrorBoundary } from 'react-error-boundary'
+
+import { Heading } from '@/components/global/ui/Heading'
+import { Section } from '@/components/global/ui/Section'
+import { Wrapper } from '@/components/global/ui/Wrapper'
 import { Error } from '@/components/news/Error'
+import { News } from '@/components/news/News'
 
 export const metadata: Metadata = {
 	title: 'Aktualności',
-	description: 'Najświeższe informacje i bieżące wydarzenia dotyczące działalności Weroniki Smarduch, Posłanki na Sejm RP. Bądź na bieżąco z inicjatywami, wystąpieniami i pracami parlamentarnymi.',
+	description:
+		'Najświeższe informacje i bieżące wydarzenia dotyczące działalności Weroniki Smarduch, Posłanki na Sejm RP. Bądź na bieżąco z inicjatywami, wystąpieniami i pracami parlamentarnymi.',
 	keywords: ['Aktualności sejmowe', 'Nowości polityczne', 'Sejm', 'Weronika Smarduch', 'Działalność poselska'],
 }
 

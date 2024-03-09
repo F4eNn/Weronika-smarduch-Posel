@@ -1,6 +1,6 @@
-import { MdHiking } from 'react-icons/md'
 import { BsCloudCheck, BsShop } from 'react-icons/bs'
 import { FaArrowsDownToPeople } from 'react-icons/fa6'
+import { MdHiking } from 'react-icons/md'
 
 export const priorities = [
 	{

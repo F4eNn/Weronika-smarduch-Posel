@@ -1,9 +1,10 @@
-import Link from 'next/link'
 import React from 'react'
 
-import Facebook from '../../../public/facebook.svg'
-import Instagram from '../../../public/instagram.svg'
-import Twitter from '../../../public/X.svg'
+import Link from 'next/link'
+
+import Facebook from '../../../../public/facebook.svg'
+import Instagram from '../../../../public/instagram.svg'
+import Twitter from '../../../../public/X.svg'
 
 const socialMedia = [
 	{
