@@ -16,7 +16,7 @@ const nextConfig = {
 				pathname: `/${process.env.NEXT_PUBLIC_CLOUDINARY_NAME}/image/upload/**`,
 			},
 		],
-		domains: ['localhost']
+		domains: ['localhost'],
 	},
 }
 

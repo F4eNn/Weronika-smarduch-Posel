@@ -1,6 +1,7 @@
 import { Poppins } from 'next/font/google'
 
 import { Footer } from '@/components/home/Footer'
+import { Meintenance } from '@/components/meintenance/Meintenance'
 import { Nav } from '@/components/nav/Nav'
 
 import type { Metadata } from 'next'
@@ -25,9 +26,22 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+	if (process.env.MAINTENANCE_MODE === 'true') {
+		return (
+			<html lang='pl'>
+				<body
+					className={`${poppins.className} flex min-h-screen flex-col pt-[82px] selection:bg-secondary selection:text-white`}
+				>
+					<Meintenance />
+				</body>
+			</html>
+		)
+	}
 	return (
 		<html lang='pl'>
-			<body className={`${poppins.className} flex min-h-screen flex-col pt-[82px]`}>
+			<body
+				className={`${poppins.className} flex min-h-screen flex-col pt-[82px] selection:bg-secondary selection:text-white`}
+			>
 				<Nav />
 				{children}
 				<Footer />
