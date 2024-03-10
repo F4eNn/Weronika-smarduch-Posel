@@ -24,9 +24,9 @@ const NewsPage = () => {
 					<div className='my-24'>
 						<Heading as='h1'>Aktualności</Heading>
 					</div>
-					<ErrorBoundary fallback={<Error />}>
+					{/* <ErrorBoundary fallback={<Error />}>
 						<News />
-					</ErrorBoundary>
+					</ErrorBoundary> */}
 				</Wrapper>
 			</Section>
 		</main>

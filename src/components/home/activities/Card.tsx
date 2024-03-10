@@ -7,7 +7,7 @@ import { cn } from '@/utils/cn'
 const CardVariants = cva('rounded-md text-darkBlue ', {
 	variants: {
 		variant: {
-			border: 'border-[1px] transition-transform duration-300 hover:scale-[1.012]',
+			border: 'border-[1px] ',
 		},
 		size: {
 			default: 'p-8',
