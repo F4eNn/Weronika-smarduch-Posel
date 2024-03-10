@@ -31,7 +31,7 @@ export const Activities = () => {
 					<TiltEffect>
 						<ActivitiesCard {...thirdCard} />
 					</TiltEffect>
-					<HeartIcon />
+					<HeartIcon rightSide/>
 				</div>
 			</Wrapper>
 		</section>
