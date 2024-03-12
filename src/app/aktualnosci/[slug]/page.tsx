@@ -18,7 +18,7 @@ type SeoTypes = {
 	keywords: string[]
 }
 type MetadataApiTypes = {
-	data: Data<{ seo: SeoTypes[] }>
+	data: Data<{ seo: SeoTypes }>
 }
 
 export async function generateMetadata({ params }: ParamsType): Promise<Metadata> {
@@ -31,13 +31,13 @@ export async function generateMetadata({ params }: ParamsType): Promise<Metadata
 		},
 	}
 	const page = await fetchApi<MetadataApiTypes>(path, urlParamsObject)
-	if (!page.data.attributes.seo[0]) return FALLBACK_SEO
-	const [metadata] = page.data.attributes.seo
+	if (!page.data.attributes.seo) return FALLBACK_SEO
+	const { keywords, metaDescription, metaTitle } = page.data.attributes.seo
 
 	return {
-		title: metadata.metaTitle,
-		description: metadata.metaDescription,
-		keywords: metadata.keywords,
+		title: metaTitle,
+		description: metaDescription,
+		keywords,
 		alternates: { canonical: `/aktualnosci/${params.slug}` },
 	}
 }
