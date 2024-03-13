@@ -45,7 +45,7 @@ export const options: HTMLReactParserOptions = {
 							alt={alt}
 							width={widthImg}
 							height={500}
-							className='max-h-[500px] w-full rounded-sm object-cover'
+							className='my-2.5 max-h-[500px] w-full rounded-sm object-cover'
 						/>
 					)
 				case 'a':

@@ -22,6 +22,16 @@ type ArticleContent = {
 	data: Data<ArticleNewsTypes>
 }
 
+type ReletedLink = {
+	id: number
+	slug: string
+	title: string
+}
+type ResponseReletedLink = {
+	nextArticleSlug: ReletedLink
+	prevArticleSlug: ReletedLink
+}
+
 export const Article = async ({ param }: ArticleProps) => {
 	const path = `slugify/slugs/article/${param}`
 
@@ -34,6 +44,7 @@ export const Article = async ({ param }: ArticleProps) => {
 		},
 	}
 	const { data } = await fetchApi<ArticleContent>(path, urlParamsObject)
+	const { nextArticleSlug, prevArticleSlug } = await fetchApi<ResponseReletedLink>(`articles/nearest/${data.id}`)
 
 	const { description, hero, publishedAt, title, post } = data.attributes
 
@@ -76,9 +87,15 @@ export const Article = async ({ param }: ArticleProps) => {
 							Powiązane artykuły
 						</Heading>
 						<hr />
-						<RelatedLink href='/' title='' />
+						<RelatedLink
+							href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/aktualnosci/${nextArticleSlug.slug}`}
+							title={nextArticleSlug.title}
+						/>
 						<hr />
-						<RelatedLink href='/' title='http://localhost:3000/aktualnosci/' />
+						<RelatedLink
+							href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/aktualnosci/${prevArticleSlug.slug}`}
+							title={prevArticleSlug.title}
+						/>
 						<hr />
 						<div className='hidden xl:block '>
 							<Heading as='h4' className='my-3.5 mb-5  text-black'>
