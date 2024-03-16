@@ -2,9 +2,9 @@ import React from 'react'
 
 import Link from 'next/link'
 
-import Facebook from '../../../../public/facebook.svg'
-import Instagram from '../../../../public/instagram.svg'
-import Twitter from '../../../../public/X.svg'
+import Facebook from '../../../../public/icons/facebook.svg'
+import Instagram from '../../../../public/icons/instagram.svg'
+import Twitter from '../../../../public/icons/X.svg'
 
 const socialMedia = [
 	{
