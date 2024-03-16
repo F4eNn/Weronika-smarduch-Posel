@@ -5,7 +5,7 @@ import { MdEmail } from 'react-icons/md'
 import { pulseAnimation } from '@/animations/animations'
 import { motion } from '@/lib/motion'
 
-import HeartIcon from '../../../public/serce.svg'
+import HeartIcon from '../../../public/icons/serce.svg'
 import { Heading } from '../global/ui/Heading'
 import { Section } from '../global/ui/Section'
 import { Wrapper } from '../global/ui/Wrapper'

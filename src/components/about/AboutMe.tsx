@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import QuoteIcon from '../../../public/quotes.svg'
+import QuoteIcon from '../../../public/icons/quotes.svg'
 import imgHashtag from '../../../public/weronika-minify/Nasza-w-sejmie.webp'
 import imgWeronika from '../../../public/weronika-minify/Weronika-1.webp'
 import { Heading } from '../global/ui/Heading'

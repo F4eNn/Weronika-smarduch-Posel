@@ -7,7 +7,7 @@ import { formatDate } from '@/utils/api-helpers'
 
 import { NewsCard } from './NewsCard'
 import { PublishedAt } from './PublishedAt'
-import SeeMoreIcon from '../../../public/see-more.svg'
+import SeeMoreIcon from '../../../public/icons/see-more.svg'
 import { buttonVariants } from '../controls/Button'
 import { Heading } from '../global/ui/Heading'
 

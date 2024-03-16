@@ -6,8 +6,8 @@ import { twMerge } from 'tailwind-merge'
 
 import type { team } from '@/constants/team'
 
-import FacebookIcon from '../../../../public/facebook-team.svg'
-import InstagramIcon from '../../../../public/team-instagram.svg'
+import FacebookIcon from '../../../../public/icons/facebook-team.svg'
+import InstagramIcon from '../../../../public/icons/team-instagram.svg'
 
 type CardItemProps = (typeof team)[number] & { idx: number }
 
