@@ -2,7 +2,7 @@ import React from 'react'
 
 import Link from 'next/link'
 
-import LinkIcon from '../../../../public/link-icon.svg'
+import LinkIcon from '../../../../public/icons/link-icon.svg'
 
 export const RelatedLink = ({ href, title }: { title: string; href: string }) => {
 	return (
