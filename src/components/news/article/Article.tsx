@@ -2,53 +2,25 @@ import parse from 'html-react-parser'
 import Image from 'next/image'
 
 import { SocialMediaLinks } from '@/components/global/ui/SocialMediaLinks'
-import { Data } from '@/types/api'
 import { formatDate } from '@/utils/api-helpers'
 import { getBase64 } from '@/utils/base64'
 import { fetchApi } from '@/utils/fetch-api'
+
+import type { ArticleContentTypes, ArticleProps, ResponseReletedLink } from './types'
 
 import { options } from './options'
 import { RelatedLink } from './RelatedLink'
 import { getImage } from './utils/getImageFormat'
 import { Heading } from '../../global/ui/Heading'
-import { ArticleNewsTypes } from '../News'
-import { PublishedAt } from '../PublishedAt'
-
-type ArticleProps = {
-	param: string
-}
-
-type ArticleContent = {
-	data: Data<ArticleNewsTypes>
-}
-
-type ReletedLink = {
-	id: number
-	slug: string
-	title: string
-}
-type ResponseReletedLink = {
-	nextArticleSlug: ReletedLink
-	prevArticleSlug: ReletedLink
-}
+import { PublishedAt } from '../components/PublishedAt'
 
 export const Article = async ({ param }: ArticleProps) => {
-	const path = `slugify/slugs/article/${param}`
+	const path = `articles/${param}`
 
-	const urlParamsObject = {
-		fields: ['title', 'description', 'publishedAt', 'post'],
-		populate: {
-			hero: {
-				fields: ['formats', 'alternativeText'],
-			},
-		},
-	}
-	const { data } = await fetchApi<ArticleContent>(path, urlParamsObject)
-	const { nextArticleSlug, prevArticleSlug } = await fetchApi<ResponseReletedLink>(`articles/nearest/${data.id}`)
+	const { description, post, createdAt, title, hero, id } = await fetchApi<ArticleContentTypes>(path)
+	const { nextArticleSlug, prevArticleSlug } = await fetchApi<ResponseReletedLink>(`articles/nearest/${id}`)
 
-	const { description, hero, publishedAt, title, post } = data.attributes
-
-	const formatedDate = formatDate(publishedAt, false)
+	const formatedDate = formatDate(createdAt, false)
 	const imageUrl = `${process.env.NEXT_PUBLIC_URL}${getImage(hero)}`
 	const bluredUrl = await getBase64(imageUrl)
 

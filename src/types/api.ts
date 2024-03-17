@@ -10,8 +10,6 @@ export type Pagination = {
 }
 
 export type RootObject<T> = {
-	data: Data<T>[]
-	meta: {
-		pagination: Pagination
-	}
+	data: T
+	pagination: Pagination
 }

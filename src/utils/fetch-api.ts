@@ -17,7 +17,7 @@ export const fetchApi = async <T>(path: string, urlParamsObject = {}, options = 
 		const res = await fetch(reqUrl, mergedOptions)
 
 		if (!res.ok) {
-			throw new Error('Invalid response')
+			throw new Error(`Coś poszło nie tak ~ ${res.status}`)
 		}
 		const data = await res.json()
 		return data

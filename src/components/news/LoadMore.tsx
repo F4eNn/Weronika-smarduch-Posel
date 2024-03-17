@@ -1,67 +1,58 @@
 'use client'
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState } from 'react'
 
-import { useObserver } from '@/hooks/use-observer'
-import { Data } from '@/types/api'
+import { useErrorBoundary } from 'react-error-boundary'
+import { twMerge } from 'tailwind-merge'
 
-import { ArticleNewsTypes } from './News'
-import { NewsItem } from './NewsItem'
+import type { ArticleNewsTypes } from './types'
+
+import { NewsItem } from './components/NewsItem'
 import { fetchArticles } from './utils/fetchArticles'
+import { Button } from '../controls/Button'
 import { LoadingSpinner } from '../global/ui/LoadingSpinner'
 
 export const LoadMore = () => {
+	const { showBoundary } = useErrorBoundary<Pick<Error, 'message'>>()
 	const [pageNumber, setPageNumber] = useState(2)
-	const [articles, setArticles] = useState<Data<ArticleNewsTypes>[]>([])
+	const [articles, setArticles] = useState<ArticleNewsTypes[]>([])
 	const [isFull, setIsFull] = useState(false)
 	const [isFetching, setIsFetching] = useState(false)
-
-	const containerRef = useRef<HTMLDivElement>(null)
-	const { isVisible } = useObserver(containerRef)
 
 	const loadMoreArticles = async () => {
 		try {
 			setIsFetching(true)
-			const { data, meta } = await fetchArticles(pageNumber)
+			const { data, pagination } = await fetchArticles(pageNumber)
 			setArticles(prev => [...prev, ...data])
 			setPageNumber(prev => prev + 1)
-
-			setIsFull(getTotalArticles(articles.length, meta.pagination.total))
-			setIsFetching(false)
+			setIsFull(pagination.page >= pagination.pageCount)
 		} catch (error) {
-			console.error(error)
+			showBoundary({ message: 'Nie udało się pobrać artykułów' })
+		} finally {
+			setIsFetching(false)
 		}
 	}
-	const getTotalArticles = (articlesArr: number, totalArticles: number) => {
-		const initialArticles = 2
-		const existingArticles = articlesArr + initialArticles
-		return totalArticles <= existingArticles
-	}
-
-	useEffect(() => {
-		if (isVisible && !isFull && !isFetching) {
-			loadMoreArticles()
-		}
-		// eslint-disable-next-line no-empty-function
-		return () => {}
-		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [isVisible])
 
 	return (
-		<div className=''>
-			<div className='my-24 grid grid-flow-dense grid-cols-2 gap-10 gap-y-24 '>
-				{articles.map(({ attributes, id }, idx) => {
-					return (
-						<NewsItem
-							isNew={false}
-							even={idx % 2 === 1}
-							key={id}
-							{...attributes}
-							imageUrl={attributes.hero.data.attributes.formats.small.url}
-						/>
-					)
+		<div>
+			<div
+				className={twMerge(
+					'grid grid-flow-dense grid-cols-2 gap-10 gap-y-24',
+					isFull && 'mb-48',
+					articles.length > 0 && 'mt-24',
+				)}
+			>
+				{articles.map((article, idx) => {
+					return <NewsItem isNew={false} even={idx % 2 === 1} key={article.id} {...article} />
 				})}
 			</div>
-			<div ref={containerRef}>{isFetching && <LoadingSpinner />}</div>
+			<div className='mt-24'>
+				{!isFull && !isFetching && (
+					<Button variant={'primary'} size={'small'} onClick={loadMoreArticles} className='mx-auto'>
+						Załaduj więcej
+					</Button>
+				)}
+				{isFetching && <LoadingSpinner />}
+			</div>
 		</div>
 	)
 }

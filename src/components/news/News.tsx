@@ -1,52 +1,24 @@
 import React from 'react'
 
+import { ErrorBoundary } from 'react-error-boundary'
+
+import { NewsItem } from './components/NewsItem'
 import { LoadMore } from './LoadMore'
-import { NewsItem } from './NewsItem'
 import { fetchArticles } from './utils/fetchArticles'
-
-type ImageUrl = {
-	url: string
-}
-
-type ImageStrapi = {
-	formats: {
-		large: ImageUrl
-		medium: ImageUrl
-		small: ImageUrl
-	}
-}
-
-export type ArticleNewsTypes = {
-	title: string
-	slug: string
-	description: string
-	hero: {
-		data: {
-			attributes: ImageStrapi
-		}
-	}
-	publishedAt: string
-	post: string
-}
+import { ErrorFallback } from '../global/ui/ErrorFallback'
 
 export const News = async () => {
 	const { data } = await fetchArticles()
 	return (
-		<div className='space-y-24'>
+		<div>
 			<div className='grid grid-flow-dense grid-cols-2 gap-10 gap-y-24'>
-				{data.map(({ attributes, id }, idx) => {
-					return (
-						<NewsItem
-							isNew={idx === 0}
-							even={idx % 2 === 1}
-							key={id}
-							{...attributes}
-							imageUrl={attributes.hero.data.attributes.formats.small.url}
-						/>
-					)
+				{data.map((article, idx) => {
+					return <NewsItem isNew={idx === 0} even={idx % 2 === 1} key={article.id} {...article} />
 				})}
 			</div>
-			<LoadMore />
+			<ErrorBoundary FallbackComponent={ErrorFallback}>
+				<LoadMore />
+			</ErrorBoundary>
 		</div>
 	)
 }

@@ -32,7 +32,7 @@ export const Footer = () => {
 								<Link
 									href={navigation.contact.path}
 									className={buttonVariants({
-										variant: 'primary',
+										variant: 'secondary',
 										size: 'default',
 										className: 'bg-secondary hover:bg-secondaryHover md:ml-auto lg:ml-0',
 									})}

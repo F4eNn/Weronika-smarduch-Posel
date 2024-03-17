@@ -7,8 +7,9 @@ import { cn } from '@/utils/cn'
 const buttonVariants = cva('flex items-center gap-3 font-[500] transition-all duration-300 active:scale-95  ', {
 	variants: {
 		variant: {
-			primary: 'rounded-[50px]  text-white hover:bg-secondaryHover',
-			border: 'w-max rounded-xl  border-[1px] border-white bg-transparent text-white hover:bg-white/10 ',
+			secondary: 'rounded-[50px] text-white hover:bg-secondaryHover',
+			primary: 'rounded-lg bg-primary text-white hover:bg-primary/80',
+			border: 'w-max rounded-xl  border-[1px] border-white bg-transparent text-white hover:bg-white/10',
 			withIcon: 'group flex w-max items-center gap-2.5 text-sm font-semibold text-secondary ',
 		},
 		size: {
@@ -17,7 +18,7 @@ const buttonVariants = cva('flex items-center gap-3 font-[500] transition-all du
 		},
 	},
 	defaultVariants: {
-		variant: 'primary',
+		variant: 'secondary',
 		size: 'default',
 	},
 })

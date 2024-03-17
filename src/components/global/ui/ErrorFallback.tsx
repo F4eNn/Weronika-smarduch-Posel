@@ -1,30 +1,29 @@
 'use client'
-import React from 'react'
-
 import Link from 'next/link'
-import { useRouter } from 'next/navigation'
 
-import { Button, buttonVariants } from '../controls/Button'
-import { Heading } from '../global/ui/Heading'
+import { Button, buttonVariants } from '@/components/controls/Button'
 
-export const Error = () => {
-	const { refresh } = useRouter()
+import type { FallbackProps } from 'react-error-boundary'
+
+import { Heading } from './Heading'
+
+export const ErrorFallback = ({ error, resetErrorBoundary }: FallbackProps) => {
 	return (
-		<div className='flex flex-col gap-6 text-center'>
+		<div className='mt-24 flex flex-col gap-6 text-center'>
 			<Heading as='h2'>Oops!</Heading>
 			<Heading as='h3' className='font-normal'>
-				Przepraszamy, nie udało się załadować aktualności
+				{error.message} {error.status}
 			</Heading>
 			<Heading as='h3' className='font-normal'>
-				Spróboj ponownie lub wróć na stronę główną{' '}
+				Spróbuj ponownie lub wróć na stronę główną{' '}
 			</Heading>
 			<div className='my-10 flex justify-around'>
 				<Button
-					onClick={refresh}
+					onClick={resetErrorBoundary}
 					className={buttonVariants({
-						size: 'small',
+						size: 'default',
 						variant: 'primary',
-						className: 'bg-slate-400 hover:bg-primary',
+						className: 'bg-slate-400  hover:bg-primary',
 					})}
 				>
 					Spróbuj ponownie

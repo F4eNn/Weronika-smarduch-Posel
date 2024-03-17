@@ -5,30 +5,27 @@ import Link from 'next/link'
 
 import { formatDate } from '@/utils/api-helpers'
 
+import type { ArticleNewsTypes } from '../types'
+
 import { NewsCard } from './NewsCard'
 import { PublishedAt } from './PublishedAt'
-import SeeMoreIcon from '../../../public/icons/see-more.svg'
-import { buttonVariants } from '../controls/Button'
-import { Heading } from '../global/ui/Heading'
+import SeeMoreIcon from '../../../../public/icons/see-more.svg'
+import { buttonVariants } from '../../controls/Button'
+import { Heading } from '../../global/ui/Heading'
 
-type NewsItemProps = {
+type NewsItemProps = Omit<ArticleNewsTypes, 'id' | 'post'> & {
 	even?: boolean
 	isNew: boolean
-	description: string
-	title: string
-	imageUrl: string
-	publishedAt: string
-	slug: string
 }
 
-export const NewsItem = ({ even = false, isNew, slug, description, title, imageUrl, publishedAt }: NewsItemProps) => {
-	const date = formatDate(publishedAt)
+export const NewsItem = ({ even = false, isNew, slug, description, title, thumbnail, createdAt }: NewsItemProps) => {
+	const date = formatDate(createdAt)
 	return (
 		<NewsCard>
-			<div className={`flex h-full gap-3 max-lg:flex-col lg:gap-16 ${!even ? 'flex-row-reverse' : ''}`}>
+			<div className={` flex h-full gap-3 max-lg:flex-col lg:gap-16 ${!even ? 'flex-row-reverse' : ''}`}>
 				<div className='relative h-[300px] w-full lg:h-full lg:w-[400px]'>
 					<Image
-						src={`${process.env.NEXT_PUBLIC_URL}${imageUrl}`}
+						src={`${process.env.NEXT_PUBLIC_URL}${thumbnail}`}
 						width={450}
 						height={450}
 						className='size-full object-cover'
