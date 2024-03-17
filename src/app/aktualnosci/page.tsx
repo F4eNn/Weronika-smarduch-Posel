@@ -3,10 +3,10 @@ import React from 'react'
 import { Metadata } from 'next'
 import { ErrorBoundary } from 'react-error-boundary'
 
+import { ErrorFallback } from '@/components/global/ui/ErrorFallback'
 import { Heading } from '@/components/global/ui/Heading'
 import { Section } from '@/components/global/ui/Section'
 import { Wrapper } from '@/components/global/ui/Wrapper'
-import { Error } from '@/components/news/Error'
 import { News } from '@/components/news/News'
 
 export const metadata: Metadata = {
@@ -24,7 +24,7 @@ const NewsPage = () => {
 					<div className='my-24'>
 						<Heading as='h1'>Aktualności</Heading>
 					</div>
-					<ErrorBoundary fallback={<Error />}>
+					<ErrorBoundary FallbackComponent={ErrorFallback}>
 						<News />
 					</ErrorBoundary>
 				</Wrapper>
